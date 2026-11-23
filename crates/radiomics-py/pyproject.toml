@@ -1,0 +1,98 @@
+[build-system]
+requires = ["maturin>=1.9,<2"]
+build-backend = "maturin"
+
+[project]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+  "Programming Language :: Rust",
+  "Topic :: Scientific/Engineering :: Image Processing",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "Typing :: Typed",
+]
+keywords = [
+  "radiomics",
+  "pyradiomics",
+  "medical-imaging",
+  "feature-extraction",
+  "ibsi",
+  "rust",
+]
+name = "rustrad"
+dynamic = ["version"]
+description = "Extract radiomics features and voxel maps from images and masks on the CPU with Rust and NumPy"
+readme = "README.md"
+requires-python = ">=3.13,<3.16"
+license = "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND MIT AND BSD-2-Clause AND BSD-3-Clause AND Zlib AND Unicode-3.0 AND CC-BY-4.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+dependencies = ["numpy>=2.1,<3"]
+authors = [
+  { name = "Joseph Sandoval" },
+  { name = "Alfredo Sandoval Jr." },
+]
+
+[project.urls]
+Homepage = "https://github.com/Alfredo-Sandoval/rust-radiomics"
+Documentation = "https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/README.md"
+Repository = "https://github.com/Alfredo-Sandoval/rust-radiomics"
+Issues = "https://github.com/Alfredo-Sandoval/rust-radiomics/issues"
+Upstream = "https://github.com/MedMLX/mlx-radiomics"
+
+[dependency-groups]
+dev = [
+  "maturin==1.16.0",
+  # validation/compare.py reads exported NIfTI maps in `make ibsi`.
+  "nibabel>=5.3,<6",
+  "pytest==9.1.1",
+  "ruff==0.15.21",
+  "pyright==1.1.414",
+]
+
+[tool.maturin]
+python-source = "python"
+exclude = ["**/__pycache__/**", "**/*.pyc", ".venv/**", "build/**", "dist/**"]
+module-name = "rustrad._native"
+# Rust 1.96 uses LLVM 22. Its debug stripper misaligns Mach-O string tables on macOS 27.
+# The linker's -S leaves out the debug map instead, which would otherwise name the
+# standard library's object files by their absolute path in the Rust toolchain.
+rustc-args = ["-Cstrip=none", "-Clink-arg=-Wl,-S"]
+
+# The generated Rust SBOM records the absolute path of the build directory.
+# THIRD_PARTY_NOTICES.md lists the crates linked into the extension.
+[tool.maturin.sbom]
+rust = false
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+extend-select = ["TID251", "TID252", "ANN401"]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"typing.Any" = {msg = "Use a precise type and parse untyped values at the boundary."}
+"typing_extensions.Any" = {msg = "Use a precise type and parse untyped values at the boundary."}
+
+[tool.pyright]
+include = ["python", "tests"]
+extraPaths = ["python"]
+pythonVersion = "3.13"
+typeCheckingMode = "strict"
+enableTypeIgnoreComments = false
+reportUnnecessaryTypeIgnoreComment = "error"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-config --strict-markers -q"

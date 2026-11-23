@@ -1,0 +1,16 @@
+NRRD0004
+# Complete NRRD file format specification at:
+# http://teem.sourceforge.net/nrrd/format.html
+type: float
+dimension: 3
+space: left-posterior-superior
+sizes: 5 3 4
+space directions: (0.5,0,0) (0,0.75,0) (0,0,1.25)
+kinds: domain domain domain
+endian: little
+encoding: raw
+space origin: (0,0,0)
+
+ˆLC‘ÃR='BœcÂJ5ÂMz¬Á¥ÿIÃÀ‹¹Áé
+­Âe&¦C¡´AeÂªáÁù›…ÂµÓÂRÂ5Ç@BÇ×¾Á?¿Bz×ŸÁßB@•CÎ
+ZBlJÂlE’ÁÆ5XBA‚AC>²×ÁÑØÂÁuvÈBÀJ±ÂN`éÁÿ°B×#hB>mAX†BzhÃéBÌBÐí¿Â«Ü&Ã(ÝAæŒB0è1ÂûG×Âí2'@˜Ê¨ÀPCJ{•Br›AŸSÞBk¤Á.¹Â’ŸiBïiBöÜ«ÁÍœÂ¸R·A²cyÃcŠBŒDB

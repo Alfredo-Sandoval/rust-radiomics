@@ -1,0 +1,54 @@
+name: Report a bug
+description: Report a reproducible problem with rust-radiomics.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the existing issues first.
+  - type: input
+    id: package-version
+    attributes:
+      label: Version
+      description: The `rustrad.__version__` value, or the Git revision for a source checkout.
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: The output of `python --version`. Python 3.13, 3.14 and 3.15 are supported.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Operating system and CPU
+      description: Include your OS and version, CPU architecture (for example Apple M2 or x86-64), NumPy version and how you installed the package.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the command or a minimal code example and describe the input format.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message
+      description: Optional. Include the relevant error text.
+      render: text

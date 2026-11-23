@@ -1,0 +1,1467 @@
+{
+ "details": {
+  "execution": {
+   "aggregation": {
+    "glcm": "3d_average",
+    "gldm": "3d",
+    "glrlm": "3d_average",
+    "glszm": "3d",
+    "ngtdm": "3d"
+   },
+   "array_dtype": "int16",
+   "array_shape": [
+    12,
+    14,
+    16
+   ],
+   "batch_size": 485,
+   "device": "gpu",
+   "excluded_voxels": 2240,
+   "feature_validity": {
+    "laws-L5S5-mirror_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "laws-L5S5-mirror_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "log-sigma-1-5-mm-3D_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "mean-M3-mirror_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "original_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHH_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HHL_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLH_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-HLL_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHH_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LHL_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLH_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_firstorder_Entropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_firstorder_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_firstorder_Skewness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_glcm_Contrast": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_glcm_Idm": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_gldm_DependenceEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_glrlm_ShortRunEmphasis": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_glszm_ZoneEntropy": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_intensityhistogram_Mean": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_ivh_VolumeAtIntensityFraction10": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    },
+    "wavelet-LLL_ngtdm_Coarseness": {
+     "excluded": 2240,
+     "finite": 448,
+     "nan": 0,
+     "negative_infinity": 0,
+     "positive_infinity": 0,
+     "valid_zero": 0
+    }
+   },
+   "gray_levels": 32,
+   "gray_levels_by_image": {
+    "laws-L5S5-mirror": 32,
+    "log-sigma-1-5-mm-3D": 32,
+    "mean-M3-mirror": 32,
+    "original": 32,
+    "wavelet-HHH": 32,
+    "wavelet-HHL": 32,
+    "wavelet-HLH": 32,
+    "wavelet-HLL": 32,
+    "wavelet-LHH": 32,
+    "wavelet-LHL": 32,
+    "wavelet-LLH": 32,
+    "wavelet-LLL": 32
+   },
+   "histogram_method": "mlx",
+   "image_geometry": {
+    "direction": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "origin": [
+     3.0,
+     -2.0,
+     5.0
+    ],
+    "shape": [
+     12,
+     14,
+     16
+    ],
+    "spacing": [
+     2.0,
+     1.5,
+     1.5
+    ]
+   },
+   "image_settings": {
+    "correct_mask": false,
+    "ibsi_interpolation": null,
+    "interpolator": "bspline",
+    "pad_distance": 5,
+    "resampled_spacing": null
+   },
+   "ivh_lattice": {
+    "levels": 32,
+    "origin": 1.0,
+    "step": 1.0
+   },
+   "map_dtype": "float64",
+   "precision": "float32",
+   "preprocessing": "Host SimpleITK I/O/spatial preprocessing and float64 binning",
+   "roi_voxels": 448,
+   "runtime": {
+    "device_name": "Apple M5 Max",
+    "mlx_enable_tf32": "0",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.18",
+    "versions": {
+     "SimpleITK": "2.5.6",
+     "medmlx-core": "0.2.6",
+     "mlx": "0.32.4",
+     "mlxradiomics": "0.2.0.dev1",
+     "nibabel": "5.4.2",
+     "numpy": "2.5.4"
+    }
+   },
+   "scratch_estimate_bytes": 67023120,
+   "settings": {
+    "bin_anchor": null,
+    "bin_count": 32,
+    "bin_origin": "resegment-or-minimum",
+    "bin_width": 25.0,
+    "constant_roi_bin": "first",
+    "covariance_divisor": "n-1",
+    "distances": [
+     1
+    ],
+    "ellipsoid_area": "ibsi-series",
+    "features": [
+     "firstorder_Mean",
+     "firstorder_Skewness",
+     "firstorder_Entropy",
+     "glcm_Contrast",
+     "glcm_Idm",
+     "gldm_DependenceEntropy",
+     "ngtdm_Coarseness",
+     "glrlm_ShortRunEmphasis",
+     "glszm_ZoneEntropy",
+     "intensityhistogram_Mean",
+     "ivh_VolumeAtIntensityFraction10"
+    ],
+    "force2d_axis": null,
+    "glcm_aggregation": "native",
+    "gldm_aggregation": "native",
+    "gldm_alpha": 0,
+    "gldzm_aggregation": "native",
+    "glrlm_aggregation": "native",
+    "glszm_aggregation": "native",
+    "ivh_bin_count": 32,
+    "ivh_bin_width": null,
+    "ivh_intensity_range": null,
+    "kernel_radius": 1,
+    "kurtosis": "excess",
+    "label": 1,
+    "mask_extrapolation": "zero",
+    "masked_kernel": true,
+    "max_gray_levels": null,
+    "neighborhood_radius": 1,
+    "neighborhood_support": "closed-radius",
+    "ngtdm_aggregation": "native",
+    "ngtdm_singular_cases": "ibsi-caps",
+    "normalize": false,
+    "normalize_scale": 1.0,
+    "remove_outliers": null,
+    "resegment_mode": "absolute",
+    "resegment_outlier_sigma": null,
+    "resegment_range": null,
+    "resegment_shape": false,
+    "scratch_mib": 64,
+    "slice_axis": 0,
+    "spline_boundary": "nearest",
+    "symmetrical_glcm": true,
+    "voxel_array_shift": 0.0,
+    "zero_variance_moments": "zero"
+   },
+   "source_geometry": {
+    "direction": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "origin": [
+     3.0,
+     -2.0,
+     5.0
+    ],
+    "shape": [
+     12,
+     14,
+     16
+    ],
+    "spacing": [
+     2.0,
+     1.5,
+     1.5
+    ]
+   },
+   "spacing": [
+    2.0,
+    1.5,
+    1.5
+   ],
+   "transforms": {
+    "gabor_constant": 0.0,
+    "gabor_gamma": 1.0,
+    "gabor_padding": "mirror",
+    "gabor_pooling": "none",
+    "gabor_response": "modulus",
+    "gabor_sigma": [],
+    "gabor_slice_axis": null,
+    "gabor_theta": [],
+    "gabor_wavelength": [],
+    "gradient_use_spacing": true,
+    "image_types": [
+     "original",
+     "wavelet",
+     "log",
+     "mean",
+     "laws"
+    ],
+    "laws_constant": 0.0,
+    "laws_energy_distance": null,
+    "laws_kernel": "L5S5",
+    "laws_padding": "mirror",
+    "laws_pooling": "none",
+    "lbp2d_method": "uniform",
+    "lbp2d_radius": 1.0,
+    "lbp2d_samples": 8,
+    "lbp3d_levels": 2,
+    "lbp3d_radius": 1.0,
+    "lbp3d_subdivision": 1,
+    "log_constant": 0.0,
+    "log_cutoff": 4.0,
+    "log_kernel": "recursive",
+    "log_padding": "mirror",
+    "log_planar": false,
+    "mean_constant": 0.0,
+    "mean_padding": "mirror",
+    "mean_planar": false,
+    "mean_support": 3,
+    "riesz_base": "log",
+    "riesz_constant": 0.0,
+    "riesz_grid": "dft",
+    "riesz_log_cutoff": 4.0,
+    "riesz_log_sigma": [],
+    "riesz_orders": [],
+    "riesz_padding": "mirror",
+    "riesz_simoncelli_levels": [
+     1
+    ],
+    "riesz_steering": false,
+    "riesz_tensor_sigma": null,
+    "scratch_mib": 64,
+    "separable_wavelet": "haar",
+    "separable_wavelet_bands": [],
+    "separable_wavelet_constant": 0.0,
+    "separable_wavelet_level": 1,
+    "separable_wavelet_padding": "mirror",
+    "separable_wavelet_planar": false,
+    "separable_wavelet_pooling": "none",
+    "sigma": [
+     1.5
+    ],
+    "simoncelli_grid": "dft",
+    "simoncelli_levels": [
+     1
+    ],
+    "simoncelli_padding": "periodic",
+    "simoncelli_planar": false,
+    "wavelet": "coif1",
+    "wavelet_level": 1,
+    "wavelet_start_level": 0
+   },
+   "voxel": true
+  },
+  "feature_count": 132,
+  "label": 1,
+  "shape": [
+   12,
+   14,
+   16
+  ],
+  "spacing": [
+   2.0,
+   1.5,
+   1.5
+  ],
+  "voxel": true
+ },
+ "maps": {
+  "laws-L5S5-mirror_firstorder_Entropy": "maps/laws-L5S5-mirror_firstorder_Entropy.nii.gz",
+  "laws-L5S5-mirror_firstorder_Mean": "maps/laws-L5S5-mirror_firstorder_Mean.nii.gz",
+  "laws-L5S5-mirror_firstorder_Skewness": "maps/laws-L5S5-mirror_firstorder_Skewness.nii.gz",
+  "laws-L5S5-mirror_glcm_Contrast": "maps/laws-L5S5-mirror_glcm_Contrast.nii.gz",
+  "laws-L5S5-mirror_glcm_Idm": "maps/laws-L5S5-mirror_glcm_Idm.nii.gz",
+  "laws-L5S5-mirror_gldm_DependenceEntropy": "maps/laws-L5S5-mirror_gldm_DependenceEntropy.nii.gz",
+  "laws-L5S5-mirror_glrlm_ShortRunEmphasis": "maps/laws-L5S5-mirror_glrlm_ShortRunEmphasis.nii.gz",
+  "laws-L5S5-mirror_glszm_ZoneEntropy": "maps/laws-L5S5-mirror_glszm_ZoneEntropy.nii.gz",
+  "laws-L5S5-mirror_intensityhistogram_Mean": "maps/laws-L5S5-mirror_intensityhistogram_Mean.nii.gz",
+  "laws-L5S5-mirror_ivh_VolumeAtIntensityFraction10": "maps/laws-L5S5-mirror_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "laws-L5S5-mirror_ngtdm_Coarseness": "maps/laws-L5S5-mirror_ngtdm_Coarseness.nii.gz",
+  "log-sigma-1-5-mm-3D_firstorder_Entropy": "maps/log-sigma-1-5-mm-3D_firstorder_Entropy.nii.gz",
+  "log-sigma-1-5-mm-3D_firstorder_Mean": "maps/log-sigma-1-5-mm-3D_firstorder_Mean.nii.gz",
+  "log-sigma-1-5-mm-3D_firstorder_Skewness": "maps/log-sigma-1-5-mm-3D_firstorder_Skewness.nii.gz",
+  "log-sigma-1-5-mm-3D_glcm_Contrast": "maps/log-sigma-1-5-mm-3D_glcm_Contrast.nii.gz",
+  "log-sigma-1-5-mm-3D_glcm_Idm": "maps/log-sigma-1-5-mm-3D_glcm_Idm.nii.gz",
+  "log-sigma-1-5-mm-3D_gldm_DependenceEntropy": "maps/log-sigma-1-5-mm-3D_gldm_DependenceEntropy.nii.gz",
+  "log-sigma-1-5-mm-3D_glrlm_ShortRunEmphasis": "maps/log-sigma-1-5-mm-3D_glrlm_ShortRunEmphasis.nii.gz",
+  "log-sigma-1-5-mm-3D_glszm_ZoneEntropy": "maps/log-sigma-1-5-mm-3D_glszm_ZoneEntropy.nii.gz",
+  "log-sigma-1-5-mm-3D_intensityhistogram_Mean": "maps/log-sigma-1-5-mm-3D_intensityhistogram_Mean.nii.gz",
+  "log-sigma-1-5-mm-3D_ivh_VolumeAtIntensityFraction10": "maps/log-sigma-1-5-mm-3D_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "log-sigma-1-5-mm-3D_ngtdm_Coarseness": "maps/log-sigma-1-5-mm-3D_ngtdm_Coarseness.nii.gz",
+  "mean-M3-mirror_firstorder_Entropy": "maps/mean-M3-mirror_firstorder_Entropy.nii.gz",
+  "mean-M3-mirror_firstorder_Mean": "maps/mean-M3-mirror_firstorder_Mean.nii.gz",
+  "mean-M3-mirror_firstorder_Skewness": "maps/mean-M3-mirror_firstorder_Skewness.nii.gz",
+  "mean-M3-mirror_glcm_Contrast": "maps/mean-M3-mirror_glcm_Contrast.nii.gz",
+  "mean-M3-mirror_glcm_Idm": "maps/mean-M3-mirror_glcm_Idm.nii.gz",
+  "mean-M3-mirror_gldm_DependenceEntropy": "maps/mean-M3-mirror_gldm_DependenceEntropy.nii.gz",
+  "mean-M3-mirror_glrlm_ShortRunEmphasis": "maps/mean-M3-mirror_glrlm_ShortRunEmphasis.nii.gz",
+  "mean-M3-mirror_glszm_ZoneEntropy": "maps/mean-M3-mirror_glszm_ZoneEntropy.nii.gz",
+  "mean-M3-mirror_intensityhistogram_Mean": "maps/mean-M3-mirror_intensityhistogram_Mean.nii.gz",
+  "mean-M3-mirror_ivh_VolumeAtIntensityFraction10": "maps/mean-M3-mirror_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "mean-M3-mirror_ngtdm_Coarseness": "maps/mean-M3-mirror_ngtdm_Coarseness.nii.gz",
+  "original_firstorder_Entropy": "maps/original_firstorder_Entropy.nii.gz",
+  "original_firstorder_Mean": "maps/original_firstorder_Mean.nii.gz",
+  "original_firstorder_Skewness": "maps/original_firstorder_Skewness.nii.gz",
+  "original_glcm_Contrast": "maps/original_glcm_Contrast.nii.gz",
+  "original_glcm_Idm": "maps/original_glcm_Idm.nii.gz",
+  "original_gldm_DependenceEntropy": "maps/original_gldm_DependenceEntropy.nii.gz",
+  "original_glrlm_ShortRunEmphasis": "maps/original_glrlm_ShortRunEmphasis.nii.gz",
+  "original_glszm_ZoneEntropy": "maps/original_glszm_ZoneEntropy.nii.gz",
+  "original_intensityhistogram_Mean": "maps/original_intensityhistogram_Mean.nii.gz",
+  "original_ivh_VolumeAtIntensityFraction10": "maps/original_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "original_ngtdm_Coarseness": "maps/original_ngtdm_Coarseness.nii.gz",
+  "wavelet-HHH_firstorder_Entropy": "maps/wavelet-HHH_firstorder_Entropy.nii.gz",
+  "wavelet-HHH_firstorder_Mean": "maps/wavelet-HHH_firstorder_Mean.nii.gz",
+  "wavelet-HHH_firstorder_Skewness": "maps/wavelet-HHH_firstorder_Skewness.nii.gz",
+  "wavelet-HHH_glcm_Contrast": "maps/wavelet-HHH_glcm_Contrast.nii.gz",
+  "wavelet-HHH_glcm_Idm": "maps/wavelet-HHH_glcm_Idm.nii.gz",
+  "wavelet-HHH_gldm_DependenceEntropy": "maps/wavelet-HHH_gldm_DependenceEntropy.nii.gz",
+  "wavelet-HHH_glrlm_ShortRunEmphasis": "maps/wavelet-HHH_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-HHH_glszm_ZoneEntropy": "maps/wavelet-HHH_glszm_ZoneEntropy.nii.gz",
+  "wavelet-HHH_intensityhistogram_Mean": "maps/wavelet-HHH_intensityhistogram_Mean.nii.gz",
+  "wavelet-HHH_ivh_VolumeAtIntensityFraction10": "maps/wavelet-HHH_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-HHH_ngtdm_Coarseness": "maps/wavelet-HHH_ngtdm_Coarseness.nii.gz",
+  "wavelet-HHL_firstorder_Entropy": "maps/wavelet-HHL_firstorder_Entropy.nii.gz",
+  "wavelet-HHL_firstorder_Mean": "maps/wavelet-HHL_firstorder_Mean.nii.gz",
+  "wavelet-HHL_firstorder_Skewness": "maps/wavelet-HHL_firstorder_Skewness.nii.gz",
+  "wavelet-HHL_glcm_Contrast": "maps/wavelet-HHL_glcm_Contrast.nii.gz",
+  "wavelet-HHL_glcm_Idm": "maps/wavelet-HHL_glcm_Idm.nii.gz",
+  "wavelet-HHL_gldm_DependenceEntropy": "maps/wavelet-HHL_gldm_DependenceEntropy.nii.gz",
+  "wavelet-HHL_glrlm_ShortRunEmphasis": "maps/wavelet-HHL_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-HHL_glszm_ZoneEntropy": "maps/wavelet-HHL_glszm_ZoneEntropy.nii.gz",
+  "wavelet-HHL_intensityhistogram_Mean": "maps/wavelet-HHL_intensityhistogram_Mean.nii.gz",
+  "wavelet-HHL_ivh_VolumeAtIntensityFraction10": "maps/wavelet-HHL_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-HHL_ngtdm_Coarseness": "maps/wavelet-HHL_ngtdm_Coarseness.nii.gz",
+  "wavelet-HLH_firstorder_Entropy": "maps/wavelet-HLH_firstorder_Entropy.nii.gz",
+  "wavelet-HLH_firstorder_Mean": "maps/wavelet-HLH_firstorder_Mean.nii.gz",
+  "wavelet-HLH_firstorder_Skewness": "maps/wavelet-HLH_firstorder_Skewness.nii.gz",
+  "wavelet-HLH_glcm_Contrast": "maps/wavelet-HLH_glcm_Contrast.nii.gz",
+  "wavelet-HLH_glcm_Idm": "maps/wavelet-HLH_glcm_Idm.nii.gz",
+  "wavelet-HLH_gldm_DependenceEntropy": "maps/wavelet-HLH_gldm_DependenceEntropy.nii.gz",
+  "wavelet-HLH_glrlm_ShortRunEmphasis": "maps/wavelet-HLH_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-HLH_glszm_ZoneEntropy": "maps/wavelet-HLH_glszm_ZoneEntropy.nii.gz",
+  "wavelet-HLH_intensityhistogram_Mean": "maps/wavelet-HLH_intensityhistogram_Mean.nii.gz",
+  "wavelet-HLH_ivh_VolumeAtIntensityFraction10": "maps/wavelet-HLH_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-HLH_ngtdm_Coarseness": "maps/wavelet-HLH_ngtdm_Coarseness.nii.gz",
+  "wavelet-HLL_firstorder_Entropy": "maps/wavelet-HLL_firstorder_Entropy.nii.gz",
+  "wavelet-HLL_firstorder_Mean": "maps/wavelet-HLL_firstorder_Mean.nii.gz",
+  "wavelet-HLL_firstorder_Skewness": "maps/wavelet-HLL_firstorder_Skewness.nii.gz",
+  "wavelet-HLL_glcm_Contrast": "maps/wavelet-HLL_glcm_Contrast.nii.gz",
+  "wavelet-HLL_glcm_Idm": "maps/wavelet-HLL_glcm_Idm.nii.gz",
+  "wavelet-HLL_gldm_DependenceEntropy": "maps/wavelet-HLL_gldm_DependenceEntropy.nii.gz",
+  "wavelet-HLL_glrlm_ShortRunEmphasis": "maps/wavelet-HLL_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-HLL_glszm_ZoneEntropy": "maps/wavelet-HLL_glszm_ZoneEntropy.nii.gz",
+  "wavelet-HLL_intensityhistogram_Mean": "maps/wavelet-HLL_intensityhistogram_Mean.nii.gz",
+  "wavelet-HLL_ivh_VolumeAtIntensityFraction10": "maps/wavelet-HLL_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-HLL_ngtdm_Coarseness": "maps/wavelet-HLL_ngtdm_Coarseness.nii.gz",
+  "wavelet-LHH_firstorder_Entropy": "maps/wavelet-LHH_firstorder_Entropy.nii.gz",
+  "wavelet-LHH_firstorder_Mean": "maps/wavelet-LHH_firstorder_Mean.nii.gz",
+  "wavelet-LHH_firstorder_Skewness": "maps/wavelet-LHH_firstorder_Skewness.nii.gz",
+  "wavelet-LHH_glcm_Contrast": "maps/wavelet-LHH_glcm_Contrast.nii.gz",
+  "wavelet-LHH_glcm_Idm": "maps/wavelet-LHH_glcm_Idm.nii.gz",
+  "wavelet-LHH_gldm_DependenceEntropy": "maps/wavelet-LHH_gldm_DependenceEntropy.nii.gz",
+  "wavelet-LHH_glrlm_ShortRunEmphasis": "maps/wavelet-LHH_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-LHH_glszm_ZoneEntropy": "maps/wavelet-LHH_glszm_ZoneEntropy.nii.gz",
+  "wavelet-LHH_intensityhistogram_Mean": "maps/wavelet-LHH_intensityhistogram_Mean.nii.gz",
+  "wavelet-LHH_ivh_VolumeAtIntensityFraction10": "maps/wavelet-LHH_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-LHH_ngtdm_Coarseness": "maps/wavelet-LHH_ngtdm_Coarseness.nii.gz",
+  "wavelet-LHL_firstorder_Entropy": "maps/wavelet-LHL_firstorder_Entropy.nii.gz",
+  "wavelet-LHL_firstorder_Mean": "maps/wavelet-LHL_firstorder_Mean.nii.gz",
+  "wavelet-LHL_firstorder_Skewness": "maps/wavelet-LHL_firstorder_Skewness.nii.gz",
+  "wavelet-LHL_glcm_Contrast": "maps/wavelet-LHL_glcm_Contrast.nii.gz",
+  "wavelet-LHL_glcm_Idm": "maps/wavelet-LHL_glcm_Idm.nii.gz",
+  "wavelet-LHL_gldm_DependenceEntropy": "maps/wavelet-LHL_gldm_DependenceEntropy.nii.gz",
+  "wavelet-LHL_glrlm_ShortRunEmphasis": "maps/wavelet-LHL_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-LHL_glszm_ZoneEntropy": "maps/wavelet-LHL_glszm_ZoneEntropy.nii.gz",
+  "wavelet-LHL_intensityhistogram_Mean": "maps/wavelet-LHL_intensityhistogram_Mean.nii.gz",
+  "wavelet-LHL_ivh_VolumeAtIntensityFraction10": "maps/wavelet-LHL_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-LHL_ngtdm_Coarseness": "maps/wavelet-LHL_ngtdm_Coarseness.nii.gz",
+  "wavelet-LLH_firstorder_Entropy": "maps/wavelet-LLH_firstorder_Entropy.nii.gz",
+  "wavelet-LLH_firstorder_Mean": "maps/wavelet-LLH_firstorder_Mean.nii.gz",
+  "wavelet-LLH_firstorder_Skewness": "maps/wavelet-LLH_firstorder_Skewness.nii.gz",
+  "wavelet-LLH_glcm_Contrast": "maps/wavelet-LLH_glcm_Contrast.nii.gz",
+  "wavelet-LLH_glcm_Idm": "maps/wavelet-LLH_glcm_Idm.nii.gz",
+  "wavelet-LLH_gldm_DependenceEntropy": "maps/wavelet-LLH_gldm_DependenceEntropy.nii.gz",
+  "wavelet-LLH_glrlm_ShortRunEmphasis": "maps/wavelet-LLH_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-LLH_glszm_ZoneEntropy": "maps/wavelet-LLH_glszm_ZoneEntropy.nii.gz",
+  "wavelet-LLH_intensityhistogram_Mean": "maps/wavelet-LLH_intensityhistogram_Mean.nii.gz",
+  "wavelet-LLH_ivh_VolumeAtIntensityFraction10": "maps/wavelet-LLH_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-LLH_ngtdm_Coarseness": "maps/wavelet-LLH_ngtdm_Coarseness.nii.gz",
+  "wavelet-LLL_firstorder_Entropy": "maps/wavelet-LLL_firstorder_Entropy.nii.gz",
+  "wavelet-LLL_firstorder_Mean": "maps/wavelet-LLL_firstorder_Mean.nii.gz",
+  "wavelet-LLL_firstorder_Skewness": "maps/wavelet-LLL_firstorder_Skewness.nii.gz",
+  "wavelet-LLL_glcm_Contrast": "maps/wavelet-LLL_glcm_Contrast.nii.gz",
+  "wavelet-LLL_glcm_Idm": "maps/wavelet-LLL_glcm_Idm.nii.gz",
+  "wavelet-LLL_gldm_DependenceEntropy": "maps/wavelet-LLL_gldm_DependenceEntropy.nii.gz",
+  "wavelet-LLL_glrlm_ShortRunEmphasis": "maps/wavelet-LLL_glrlm_ShortRunEmphasis.nii.gz",
+  "wavelet-LLL_glszm_ZoneEntropy": "maps/wavelet-LLL_glszm_ZoneEntropy.nii.gz",
+  "wavelet-LLL_intensityhistogram_Mean": "maps/wavelet-LLL_intensityhistogram_Mean.nii.gz",
+  "wavelet-LLL_ivh_VolumeAtIntensityFraction10": "maps/wavelet-LLL_ivh_VolumeAtIntensityFraction10.nii.gz",
+  "wavelet-LLL_ngtdm_Coarseness": "maps/wavelet-LLL_ngtdm_Coarseness.nii.gz"
+ },
+ "mode": "voxel",
+ "schema_version": 2
+}

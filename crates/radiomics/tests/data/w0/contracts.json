@@ -1,0 +1,61 @@
+{
+  "required": [
+    "array_dtype",
+    "array_shape",
+    "device",
+    "excluded_voxels",
+    "feature_validity",
+    "gray_levels",
+    "histogram_method",
+    "precision",
+    "preprocessing",
+    "roi_voxels",
+    "runtime",
+    "settings",
+    "spacing",
+    "voxel"
+  ],
+  "optional": [
+    "aggregation",
+    "batch_size",
+    "first_order_batch_size",
+    "first_order_cache_bytes",
+    "first_order_scratch_estimate_bytes",
+    "gray_levels_by_image",
+    "image_geometry",
+    "image_settings",
+    "ivh_lattice",
+    "map_dtype",
+    "scratch_estimate_bytes",
+    "source_geometry",
+    "transforms"
+  ],
+  "runtime": [
+    "device_name",
+    "mlx_enable_tf32",
+    "platform",
+    "python",
+    "versions"
+  ],
+  "counts": {
+    "finite": 6,
+    "valid_zero": 4,
+    "nan": 2,
+    "positive_infinity": 2,
+    "negative_infinity": 2,
+    "excluded": 5
+  },
+  "nested": {
+    "2": [
+      [
+        "NaN",
+        "-Infinity",
+        "Infinity",
+        null
+      ]
+    ],
+    "1": [
+      false
+    ]
+  }
+}
