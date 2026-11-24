@@ -1,0 +1,9 @@
+{
+"metadata":{"schema_version":1,"command":"python parity/golden.py","python":"3.13.18","numpy":"2.5.4","engine":"mlxradiomics","version":"1.1.0","mlx_commit":"b58783cc10d02d69533e67443123afa423760113","mlx":"0.32.4","mlx_enable_tf32":0},
+"case":"synthetic_single_voxel",
+"shape":[3,4,5],
+"mode":"voxel",
+"settings":{"convention":"pyradiomics","label":1,"bin_width":25.0,"bin_count":32,"ivh_bin_count":32,"ivh_bin_width":null,"distances":[1,2],"force2d_axis":0,"masked_kernel":true,"kernel_radius":1,"symmetrical_glcm":true,"voxel_array_shift":0.0},
+"expected_error":"voxel extraction requires at least two selected voxels",
+"features":{}
+}

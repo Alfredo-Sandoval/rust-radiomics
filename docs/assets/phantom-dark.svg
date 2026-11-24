@@ -1,0 +1,558 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 420" width="850" height="420">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}.label{font-size:14px;font-weight:600;fill:#e6edf3}.note{font-size:12px;fill:#8d96a0}.value{font-size:12px;text-anchor:middle;font-variant-numeric:tabular-nums}.cube{stroke:#0d1117;stroke-width:1;stroke-linejoin:round}</style>
+<text class="label" x="12" y="27">Image<tspan class="note" dx="10">Blue voxels are outside the mask</tspan></text>
+<polygon class="cube" points="95.1,38.0 115.9,50.0 95.1,62.0 74.4,50.0" fill="#474747"/>
+<polygon class="cube" points="74.4,50.0 95.1,62.0 95.1,86.0 74.4,74.0" fill="#3a3a3a"/>
+<polygon class="cube" points="115.9,50.0 95.1,62.0 95.1,86.0 115.9,74.0" fill="#2f2f2f"/>
+<text class="value" x="95.1" y="54.0" fill="#ffffff">1</text>
+<polygon class="cube" points="115.9,50.0 136.7,62.0 115.9,74.0 95.1,62.0" fill="#878787"/>
+<polygon class="cube" points="95.1,62.0 115.9,74.0 115.9,98.0 95.1,86.0" fill="#6f6f6f"/>
+<polygon class="cube" points="136.7,62.0 115.9,74.0 115.9,98.0 136.7,86.0" fill="#595959"/>
+<text class="value" x="115.9" y="66.0" fill="#111111">4</text>
+<polygon class="cube" points="74.4,50.0 95.1,62.0 74.4,74.0 53.6,62.0" fill="#474747"/>
+<polygon class="cube" points="53.6,62.0 74.4,74.0 74.4,98.0 53.6,86.0" fill="#3a3a3a"/>
+<polygon class="cube" points="95.1,62.0 74.4,74.0 74.4,98.0 95.1,86.0" fill="#2f2f2f"/>
+<text class="value" x="74.4" y="66.0" fill="#ffffff">1</text>
+<polygon class="cube" points="136.7,62.0 157.5,74.0 136.7,86.0 115.9,74.0" fill="#878787"/>
+<polygon class="cube" points="115.9,74.0 136.7,86.0 136.7,110.0 115.9,98.0" fill="#6f6f6f"/>
+<polygon class="cube" points="157.5,74.0 136.7,86.0 136.7,110.0 157.5,98.0" fill="#595959"/>
+<text class="value" x="136.7" y="78.0" fill="#111111">4</text>
+<polygon class="cube" points="95.1,62.0 115.9,74.0 95.1,86.0 74.4,74.0" fill="#878787"/>
+<polygon class="cube" points="74.4,74.0 95.1,86.0 95.1,110.0 74.4,98.0" fill="#6f6f6f"/>
+<polygon class="cube" points="115.9,74.0 95.1,86.0 95.1,110.0 115.9,98.0" fill="#595959"/>
+<text class="value" x="95.1" y="78.0" fill="#111111">4</text>
+<polygon class="cube" points="53.6,62.0 74.4,74.0 53.6,86.0 32.8,74.0" fill="#878787"/>
+<polygon class="cube" points="32.8,74.0 53.6,86.0 53.6,110.0 32.8,98.0" fill="#6f6f6f"/>
+<polygon class="cube" points="74.4,74.0 53.6,86.0 53.6,110.0 74.4,98.0" fill="#595959"/>
+<text class="value" x="53.6" y="78.0" fill="#111111">4</text>
+<polygon class="cube" points="157.5,74.0 178.3,86.0 157.5,98.0 136.7,86.0" fill="#474747"/>
+<polygon class="cube" points="136.7,86.0 157.5,98.0 157.5,122.0 136.7,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="178.3,86.0 157.5,98.0 157.5,122.0 178.3,110.0" fill="#2f2f2f"/>
+<text class="value" x="157.5" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="115.9,74.0 136.7,86.0 115.9,98.0 95.1,86.0" fill="#b1b1b1"/>
+<polygon class="cube" points="95.1,86.0 115.9,98.0 115.9,122.0 95.1,110.0" fill="#919191"/>
+<polygon class="cube" points="136.7,86.0 115.9,98.0 115.9,122.0 136.7,110.0" fill="#757575"/>
+<text class="value" x="115.9" y="90.0" fill="#111111">6</text>
+<polygon class="cube" points="74.4,74.0 95.1,86.0 74.4,98.0 53.6,86.0" fill="#474747"/>
+<polygon class="cube" points="53.6,86.0 74.4,98.0 74.4,122.0 53.6,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="95.1,86.0 74.4,98.0 74.4,122.0 95.1,110.0" fill="#2f2f2f"/>
+<text class="value" x="74.4" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="32.8,74.0 53.6,86.0 32.8,98.0 12.0,86.0" fill="#878787"/>
+<polygon class="cube" points="12.0,86.0 32.8,98.0 32.8,122.0 12.0,110.0" fill="#6f6f6f"/>
+<polygon class="cube" points="53.6,86.0 32.8,98.0 32.8,122.0 53.6,110.0" fill="#595959"/>
+<text class="value" x="32.8" y="90.0" fill="#111111">4</text>
+<polygon class="cube" points="178.3,86.0 199.1,98.0 178.3,110.0 157.5,98.0" fill="#474747"/>
+<polygon class="cube" points="157.5,98.0 178.3,110.0 178.3,134.0 157.5,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="199.1,98.0 178.3,110.0 178.3,134.0 199.1,122.0" fill="#2f2f2f"/>
+<text class="value" x="178.3" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="136.7,86.0 157.5,98.0 136.7,110.0 115.9,98.0" fill="#474747"/>
+<polygon class="cube" points="115.9,98.0 136.7,110.0 136.7,134.0 115.9,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="157.5,98.0 136.7,110.0 136.7,134.0 157.5,122.0" fill="#2f2f2f"/>
+<text class="value" x="136.7" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="95.1,86.0 115.9,98.0 95.1,110.0 74.4,98.0" fill="#b1b1b1"/>
+<polygon class="cube" points="74.4,98.0 95.1,110.0 95.1,134.0 74.4,122.0" fill="#919191"/>
+<polygon class="cube" points="115.9,98.0 95.1,110.0 95.1,134.0 115.9,122.0" fill="#757575"/>
+<text class="value" x="95.1" y="102.0" fill="#111111">6</text>
+<polygon class="cube" points="53.6,86.0 74.4,98.0 53.6,110.0 32.8,98.0" fill="#878787"/>
+<polygon class="cube" points="32.8,98.0 53.6,110.0 53.6,134.0 32.8,122.0" fill="#6f6f6f"/>
+<polygon class="cube" points="74.4,98.0 53.6,110.0 53.6,134.0 74.4,122.0" fill="#595959"/>
+<text class="value" x="53.6" y="102.0" fill="#111111">4</text>
+<polygon class="cube" points="157.5,98.0 178.3,110.0 157.5,122.0 136.7,110.0" fill="#474747"/>
+<polygon class="cube" points="136.7,110.0 157.5,122.0 157.5,146.0 136.7,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="178.3,110.0 157.5,122.0 157.5,146.0 178.3,134.0" fill="#2f2f2f"/>
+<text class="value" x="157.5" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="115.9,98.0 136.7,110.0 115.9,122.0 95.1,110.0" fill="#878787"/>
+<polygon class="cube" points="95.1,110.0 115.9,122.0 115.9,146.0 95.1,134.0" fill="#6f6f6f"/>
+<polygon class="cube" points="136.7,110.0 115.9,122.0 115.9,146.0 136.7,134.0" fill="#595959"/>
+<text class="value" x="115.9" y="114.0" fill="#111111">4</text>
+<polygon class="cube" points="74.4,98.0 95.1,110.0 74.4,122.0 53.6,110.0" fill="#b1b1b1"/>
+<polygon class="cube" points="53.6,110.0 74.4,122.0 74.4,146.0 53.6,134.0" fill="#919191"/>
+<polygon class="cube" points="95.1,110.0 74.4,122.0 74.4,146.0 95.1,134.0" fill="#757575"/>
+<text class="value" x="74.4" y="114.0" fill="#111111">6</text>
+<polygon class="cube" points="136.7,110.0 157.5,122.0 136.7,134.0 115.9,122.0" fill="#474747"/>
+<polygon class="cube" points="115.9,122.0 136.7,134.0 136.7,158.0 115.9,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="157.5,122.0 136.7,134.0 136.7,158.0 157.5,146.0" fill="#2f2f2f"/>
+<text class="value" x="136.7" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="95.1,110.0 115.9,122.0 95.1,134.0 74.4,122.0" fill="#878787"/>
+<polygon class="cube" points="74.4,122.0 95.1,134.0 95.1,158.0 74.4,146.0" fill="#6f6f6f"/>
+<polygon class="cube" points="115.9,122.0 95.1,134.0 95.1,158.0 115.9,146.0" fill="#595959"/>
+<text class="value" x="95.1" y="126.0" fill="#111111">4</text>
+<polygon class="cube" points="115.9,122.0 136.7,134.0 115.9,146.0 95.1,134.0" fill="#474747"/>
+<polygon class="cube" points="95.1,134.0 115.9,146.0 115.9,170.0 95.1,158.0" fill="#3a3a3a"/>
+<polygon class="cube" points="136.7,134.0 115.9,146.0 115.9,170.0 136.7,158.0" fill="#2f2f2f"/>
+<text class="value" x="115.9" y="138.0" fill="#ffffff">1</text>
+<text class="note" x="105.5" y="192.0" text-anchor="middle">Slice 1</text>
+<polygon class="cube" points="308.2,38.0 329.0,50.0 308.2,62.0 287.4,50.0" fill="#474747"/>
+<polygon class="cube" points="287.4,50.0 308.2,62.0 308.2,86.0 287.4,74.0" fill="#3a3a3a"/>
+<polygon class="cube" points="329.0,50.0 308.2,62.0 308.2,86.0 329.0,74.0" fill="#2f2f2f"/>
+<text class="value" x="308.2" y="54.0" fill="#ffffff">1</text>
+<polygon class="cube" points="329.0,50.0 349.8,62.0 329.0,74.0 308.2,62.0" fill="#878787"/>
+<polygon class="cube" points="308.2,62.0 329.0,74.0 329.0,98.0 308.2,86.0" fill="#6f6f6f"/>
+<polygon class="cube" points="349.8,62.0 329.0,74.0 329.0,98.0 349.8,86.0" fill="#595959"/>
+<text class="value" x="329.0" y="66.0" fill="#111111">4</text>
+<polygon class="cube" points="287.4,50.0 308.2,62.0 287.4,74.0 266.6,62.0" fill="#474747"/>
+<polygon class="cube" points="266.6,62.0 287.4,74.0 287.4,98.0 266.6,86.0" fill="#3a3a3a"/>
+<polygon class="cube" points="308.2,62.0 287.4,74.0 287.4,98.0 308.2,86.0" fill="#2f2f2f"/>
+<text class="value" x="287.4" y="66.0" fill="#ffffff">1</text>
+<polygon class="cube" points="349.8,62.0 370.6,74.0 349.8,86.0 329.0,74.0" fill="#878787"/>
+<polygon class="cube" points="329.0,74.0 349.8,86.0 349.8,110.0 329.0,98.0" fill="#6f6f6f"/>
+<polygon class="cube" points="370.6,74.0 349.8,86.0 349.8,110.0 370.6,98.0" fill="#595959"/>
+<text class="value" x="349.8" y="78.0" fill="#111111">4</text>
+<polygon class="cube" points="308.2,62.0 329.0,74.0 308.2,86.0 287.4,74.0" fill="#474747"/>
+<polygon class="cube" points="287.4,74.0 308.2,86.0 308.2,110.0 287.4,98.0" fill="#3a3a3a"/>
+<polygon class="cube" points="329.0,74.0 308.2,86.0 308.2,110.0 329.0,98.0" fill="#2f2f2f"/>
+<text class="value" x="308.2" y="78.0" fill="#ffffff">1</text>
+<polygon class="cube" points="266.6,62.0 287.4,74.0 266.6,86.0 245.8,74.0" fill="#7fb2e5"/>
+<polygon class="cube" points="245.8,74.0 266.6,86.0 266.6,110.0 245.8,98.0" fill="#6892bc"/>
+<polygon class="cube" points="287.4,74.0 266.6,86.0 266.6,110.0 287.4,98.0" fill="#547597"/>
+<text class="value" x="266.6" y="78.0" fill="#111111">1</text>
+<polygon class="cube" points="370.6,74.0 391.3,86.0 370.6,98.0 349.8,86.0" fill="#474747"/>
+<polygon class="cube" points="349.8,86.0 370.6,98.0 370.6,122.0 349.8,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="391.3,86.0 370.6,98.0 370.6,122.0 391.3,110.0" fill="#2f2f2f"/>
+<text class="value" x="370.6" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="329.0,74.0 349.8,86.0 329.0,98.0 308.2,86.0" fill="#b1b1b1"/>
+<polygon class="cube" points="308.2,86.0 329.0,98.0 329.0,122.0 308.2,110.0" fill="#919191"/>
+<polygon class="cube" points="349.8,86.0 329.0,98.0 329.0,122.0 349.8,110.0" fill="#757575"/>
+<text class="value" x="329.0" y="90.0" fill="#111111">6</text>
+<polygon class="cube" points="287.4,74.0 308.2,86.0 287.4,98.0 266.6,86.0" fill="#474747"/>
+<polygon class="cube" points="266.6,86.0 287.4,98.0 287.4,122.0 266.6,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="308.2,86.0 287.4,98.0 287.4,122.0 308.2,110.0" fill="#2f2f2f"/>
+<text class="value" x="287.4" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="245.8,74.0 266.6,86.0 245.8,98.0 225.1,86.0" fill="#878787"/>
+<polygon class="cube" points="225.1,86.0 245.8,98.0 245.8,122.0 225.1,110.0" fill="#6f6f6f"/>
+<polygon class="cube" points="266.6,86.0 245.8,98.0 245.8,122.0 266.6,110.0" fill="#595959"/>
+<text class="value" x="245.8" y="90.0" fill="#111111">4</text>
+<polygon class="cube" points="391.3,86.0 412.1,98.0 391.3,110.0 370.6,98.0" fill="#474747"/>
+<polygon class="cube" points="370.6,98.0 391.3,110.0 391.3,134.0 370.6,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="412.1,98.0 391.3,110.0 391.3,134.0 412.1,122.0" fill="#2f2f2f"/>
+<text class="value" x="391.3" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="349.8,86.0 370.6,98.0 349.8,110.0 329.0,98.0" fill="#474747"/>
+<polygon class="cube" points="329.0,98.0 349.8,110.0 349.8,134.0 329.0,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="370.6,98.0 349.8,110.0 349.8,134.0 370.6,122.0" fill="#2f2f2f"/>
+<text class="value" x="349.8" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="308.2,86.0 329.0,98.0 308.2,110.0 287.4,98.0" fill="#717171"/>
+<polygon class="cube" points="287.4,98.0 308.2,110.0 308.2,134.0 287.4,122.0" fill="#5d5d5d"/>
+<polygon class="cube" points="329.0,98.0 308.2,110.0 308.2,134.0 329.0,122.0" fill="#4b4b4b"/>
+<text class="value" x="308.2" y="102.0" fill="#ffffff">3</text>
+<polygon class="cube" points="266.6,86.0 287.4,98.0 266.6,110.0 245.8,98.0" fill="#878787"/>
+<polygon class="cube" points="245.8,98.0 266.6,110.0 266.6,134.0 245.8,122.0" fill="#6f6f6f"/>
+<polygon class="cube" points="287.4,98.0 266.6,110.0 266.6,134.0 287.4,122.0" fill="#595959"/>
+<text class="value" x="266.6" y="102.0" fill="#111111">4</text>
+<polygon class="cube" points="370.6,98.0 391.3,110.0 370.6,122.0 349.8,110.0" fill="#474747"/>
+<polygon class="cube" points="349.8,110.0 370.6,122.0 370.6,146.0 349.8,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="391.3,110.0 370.6,122.0 370.6,146.0 391.3,134.0" fill="#2f2f2f"/>
+<text class="value" x="370.6" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="329.0,98.0 349.8,110.0 329.0,122.0 308.2,110.0" fill="#474747"/>
+<polygon class="cube" points="308.2,110.0 329.0,122.0 329.0,146.0 308.2,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="349.8,110.0 329.0,122.0 329.0,146.0 349.8,134.0" fill="#2f2f2f"/>
+<text class="value" x="329.0" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="287.4,98.0 308.2,110.0 287.4,122.0 266.6,110.0" fill="#b1b1b1"/>
+<polygon class="cube" points="266.6,110.0 287.4,122.0 287.4,146.0 266.6,134.0" fill="#919191"/>
+<polygon class="cube" points="308.2,110.0 287.4,122.0 287.4,146.0 308.2,134.0" fill="#757575"/>
+<text class="value" x="287.4" y="114.0" fill="#111111">6</text>
+<polygon class="cube" points="349.8,110.0 370.6,122.0 349.8,134.0 329.0,122.0" fill="#474747"/>
+<polygon class="cube" points="329.0,122.0 349.8,134.0 349.8,158.0 329.0,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="370.6,122.0 349.8,134.0 349.8,158.0 370.6,146.0" fill="#2f2f2f"/>
+<text class="value" x="349.8" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="308.2,110.0 329.0,122.0 308.2,134.0 287.4,122.0" fill="#474747"/>
+<polygon class="cube" points="287.4,122.0 308.2,134.0 308.2,158.0 287.4,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="329.0,122.0 308.2,134.0 308.2,158.0 329.0,146.0" fill="#2f2f2f"/>
+<text class="value" x="308.2" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="329.0,122.0 349.8,134.0 329.0,146.0 308.2,134.0" fill="#474747"/>
+<polygon class="cube" points="308.2,134.0 329.0,146.0 329.0,170.0 308.2,158.0" fill="#3a3a3a"/>
+<polygon class="cube" points="349.8,134.0 329.0,146.0 329.0,170.0 349.8,158.0" fill="#2f2f2f"/>
+<text class="value" x="329.0" y="138.0" fill="#ffffff">1</text>
+<text class="note" x="318.6" y="192.0" text-anchor="middle">Slice 2</text>
+<polygon class="cube" points="521.3,38.0 542.0,50.0 521.3,62.0 500.5,50.0" fill="#474747"/>
+<polygon class="cube" points="500.5,50.0 521.3,62.0 521.3,86.0 500.5,74.0" fill="#3a3a3a"/>
+<polygon class="cube" points="542.0,50.0 521.3,62.0 521.3,86.0 542.0,74.0" fill="#2f2f2f"/>
+<text class="value" x="521.3" y="54.0" fill="#ffffff">1</text>
+<polygon class="cube" points="542.0,50.0 562.8,62.0 542.0,74.0 521.3,62.0" fill="#878787"/>
+<polygon class="cube" points="521.3,62.0 542.0,74.0 542.0,98.0 521.3,86.0" fill="#6f6f6f"/>
+<polygon class="cube" points="562.8,62.0 542.0,74.0 542.0,98.0 562.8,86.0" fill="#595959"/>
+<text class="value" x="542.0" y="66.0" fill="#111111">4</text>
+<polygon class="cube" points="500.5,50.0 521.3,62.0 500.5,74.0 479.7,62.0" fill="#474747"/>
+<polygon class="cube" points="479.7,62.0 500.5,74.0 500.5,98.0 479.7,86.0" fill="#3a3a3a"/>
+<polygon class="cube" points="521.3,62.0 500.5,74.0 500.5,98.0 521.3,86.0" fill="#2f2f2f"/>
+<text class="value" x="500.5" y="66.0" fill="#ffffff">1</text>
+<polygon class="cube" points="562.8,62.0 583.6,74.0 562.8,86.0 542.0,74.0" fill="#878787"/>
+<polygon class="cube" points="542.0,74.0 562.8,86.0 562.8,110.0 542.0,98.0" fill="#6f6f6f"/>
+<polygon class="cube" points="583.6,74.0 562.8,86.0 562.8,110.0 583.6,98.0" fill="#595959"/>
+<text class="value" x="562.8" y="78.0" fill="#111111">4</text>
+<polygon class="cube" points="521.3,62.0 542.0,74.0 521.3,86.0 500.5,74.0" fill="#474747"/>
+<polygon class="cube" points="500.5,74.0 521.3,86.0 521.3,110.0 500.5,98.0" fill="#3a3a3a"/>
+<polygon class="cube" points="542.0,74.0 521.3,86.0 521.3,110.0 542.0,98.0" fill="#2f2f2f"/>
+<text class="value" x="521.3" y="78.0" fill="#ffffff">1</text>
+<polygon class="cube" points="479.7,62.0 500.5,74.0 479.7,86.0 458.9,74.0" fill="#474747"/>
+<polygon class="cube" points="458.9,74.0 479.7,86.0 479.7,110.0 458.9,98.0" fill="#3a3a3a"/>
+<polygon class="cube" points="500.5,74.0 479.7,86.0 479.7,110.0 500.5,98.0" fill="#2f2f2f"/>
+<text class="value" x="479.7" y="78.0" fill="#ffffff">1</text>
+<polygon class="cube" points="583.6,74.0 604.4,86.0 583.6,98.0 562.8,86.0" fill="#7fb2e5"/>
+<polygon class="cube" points="562.8,86.0 583.6,98.0 583.6,122.0 562.8,110.0" fill="#6892bc"/>
+<polygon class="cube" points="604.4,86.0 583.6,98.0 583.6,122.0 604.4,110.0" fill="#547597"/>
+<text class="value" x="583.6" y="90.0" fill="#111111">1</text>
+<polygon class="cube" points="542.0,74.0 562.8,86.0 542.0,98.0 521.3,86.0" fill="#474747"/>
+<polygon class="cube" points="521.3,86.0 542.0,98.0 542.0,122.0 521.3,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="562.8,86.0 542.0,98.0 542.0,122.0 562.8,110.0" fill="#2f2f2f"/>
+<text class="value" x="542.0" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="500.5,74.0 521.3,86.0 500.5,98.0 479.7,86.0" fill="#474747"/>
+<polygon class="cube" points="479.7,86.0 500.5,98.0 500.5,122.0 479.7,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="521.3,86.0 500.5,98.0 500.5,122.0 521.3,110.0" fill="#2f2f2f"/>
+<text class="value" x="500.5" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="458.9,74.0 479.7,86.0 458.9,98.0 438.1,86.0" fill="#474747"/>
+<polygon class="cube" points="438.1,86.0 458.9,98.0 458.9,122.0 438.1,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="479.7,86.0 458.9,98.0 458.9,122.0 479.7,110.0" fill="#2f2f2f"/>
+<text class="value" x="458.9" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="604.4,86.0 625.2,98.0 604.4,110.0 583.6,98.0" fill="#7fb2e5"/>
+<polygon class="cube" points="583.6,98.0 604.4,110.0 604.4,134.0 583.6,122.0" fill="#6892bc"/>
+<polygon class="cube" points="625.2,98.0 604.4,110.0 604.4,134.0 625.2,122.0" fill="#547597"/>
+<text class="value" x="604.4" y="102.0" fill="#111111">1</text>
+<polygon class="cube" points="562.8,86.0 583.6,98.0 562.8,110.0 542.0,98.0" fill="#474747"/>
+<polygon class="cube" points="542.0,98.0 562.8,110.0 562.8,134.0 542.0,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="583.6,98.0 562.8,110.0 562.8,134.0 583.6,122.0" fill="#2f2f2f"/>
+<text class="value" x="562.8" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="521.3,86.0 542.0,98.0 521.3,110.0 500.5,98.0" fill="#7fb2e5"/>
+<polygon class="cube" points="500.5,98.0 521.3,110.0 521.3,134.0 500.5,122.0" fill="#6892bc"/>
+<polygon class="cube" points="542.0,98.0 521.3,110.0 521.3,134.0 542.0,122.0" fill="#547597"/>
+<text class="value" x="521.3" y="102.0" fill="#111111">9</text>
+<polygon class="cube" points="479.7,86.0 500.5,98.0 479.7,110.0 458.9,98.0" fill="#474747"/>
+<polygon class="cube" points="458.9,98.0 479.7,110.0 479.7,134.0 458.9,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="500.5,98.0 479.7,110.0 479.7,134.0 500.5,122.0" fill="#2f2f2f"/>
+<text class="value" x="479.7" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="583.6,98.0 604.4,110.0 583.6,122.0 562.8,110.0" fill="#474747"/>
+<polygon class="cube" points="562.8,110.0 583.6,122.0 583.6,146.0 562.8,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="604.4,110.0 583.6,122.0 583.6,146.0 604.4,134.0" fill="#2f2f2f"/>
+<text class="value" x="583.6" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="542.0,98.0 562.8,110.0 542.0,122.0 521.3,110.0" fill="#474747"/>
+<polygon class="cube" points="521.3,110.0 542.0,122.0 542.0,146.0 521.3,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="562.8,110.0 542.0,122.0 542.0,146.0 562.8,134.0" fill="#2f2f2f"/>
+<text class="value" x="542.0" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="500.5,98.0 521.3,110.0 500.5,122.0 479.7,110.0" fill="#b1b1b1"/>
+<polygon class="cube" points="479.7,110.0 500.5,122.0 500.5,146.0 479.7,134.0" fill="#919191"/>
+<polygon class="cube" points="521.3,110.0 500.5,122.0 500.5,146.0 521.3,134.0" fill="#757575"/>
+<text class="value" x="500.5" y="114.0" fill="#111111">6</text>
+<polygon class="cube" points="562.8,110.0 583.6,122.0 562.8,134.0 542.0,122.0" fill="#474747"/>
+<polygon class="cube" points="542.0,122.0 562.8,134.0 562.8,158.0 542.0,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="583.6,122.0 562.8,134.0 562.8,158.0 583.6,146.0" fill="#2f2f2f"/>
+<text class="value" x="562.8" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="521.3,110.0 542.0,122.0 521.3,134.0 500.5,122.0" fill="#474747"/>
+<polygon class="cube" points="500.5,122.0 521.3,134.0 521.3,158.0 500.5,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="542.0,122.0 521.3,134.0 521.3,158.0 542.0,146.0" fill="#2f2f2f"/>
+<text class="value" x="521.3" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="542.0,122.0 562.8,134.0 542.0,146.0 521.3,134.0" fill="#474747"/>
+<polygon class="cube" points="521.3,134.0 542.0,146.0 542.0,170.0 521.3,158.0" fill="#3a3a3a"/>
+<polygon class="cube" points="562.8,134.0 542.0,146.0 542.0,170.0 562.8,158.0" fill="#2f2f2f"/>
+<text class="value" x="542.0" y="138.0" fill="#ffffff">1</text>
+<text class="note" x="531.7" y="192.0" text-anchor="middle">Slice 3</text>
+<polygon class="cube" points="734.3,38.0 755.1,50.0 734.3,62.0 713.5,50.0" fill="#474747"/>
+<polygon class="cube" points="713.5,50.0 734.3,62.0 734.3,86.0 713.5,74.0" fill="#3a3a3a"/>
+<polygon class="cube" points="755.1,50.0 734.3,62.0 734.3,86.0 755.1,74.0" fill="#2f2f2f"/>
+<text class="value" x="734.3" y="54.0" fill="#ffffff">1</text>
+<polygon class="cube" points="755.1,50.0 775.9,62.0 755.1,74.0 734.3,62.0" fill="#878787"/>
+<polygon class="cube" points="734.3,62.0 755.1,74.0 755.1,98.0 734.3,86.0" fill="#6f6f6f"/>
+<polygon class="cube" points="775.9,62.0 755.1,74.0 755.1,98.0 775.9,86.0" fill="#595959"/>
+<text class="value" x="755.1" y="66.0" fill="#111111">4</text>
+<polygon class="cube" points="713.5,50.0 734.3,62.0 713.5,74.0 692.8,62.0" fill="#474747"/>
+<polygon class="cube" points="692.8,62.0 713.5,74.0 713.5,98.0 692.8,86.0" fill="#3a3a3a"/>
+<polygon class="cube" points="734.3,62.0 713.5,74.0 713.5,98.0 734.3,86.0" fill="#2f2f2f"/>
+<text class="value" x="713.5" y="66.0" fill="#ffffff">1</text>
+<polygon class="cube" points="775.9,62.0 796.7,74.0 775.9,86.0 755.1,74.0" fill="#878787"/>
+<polygon class="cube" points="755.1,74.0 775.9,86.0 775.9,110.0 755.1,98.0" fill="#6f6f6f"/>
+<polygon class="cube" points="796.7,74.0 775.9,86.0 775.9,110.0 796.7,98.0" fill="#595959"/>
+<text class="value" x="775.9" y="78.0" fill="#111111">4</text>
+<polygon class="cube" points="734.3,62.0 755.1,74.0 734.3,86.0 713.5,74.0" fill="#474747"/>
+<polygon class="cube" points="713.5,74.0 734.3,86.0 734.3,110.0 713.5,98.0" fill="#3a3a3a"/>
+<polygon class="cube" points="755.1,74.0 734.3,86.0 734.3,110.0 755.1,98.0" fill="#2f2f2f"/>
+<text class="value" x="734.3" y="78.0" fill="#ffffff">1</text>
+<polygon class="cube" points="692.8,62.0 713.5,74.0 692.8,86.0 672.0,74.0" fill="#474747"/>
+<polygon class="cube" points="672.0,74.0 692.8,86.0 692.8,110.0 672.0,98.0" fill="#3a3a3a"/>
+<polygon class="cube" points="713.5,74.0 692.8,86.0 692.8,110.0 713.5,98.0" fill="#2f2f2f"/>
+<text class="value" x="692.8" y="78.0" fill="#ffffff">1</text>
+<polygon class="cube" points="796.7,74.0 817.5,86.0 796.7,98.0 775.9,86.0" fill="#7fb2e5"/>
+<polygon class="cube" points="775.9,86.0 796.7,98.0 796.7,122.0 775.9,110.0" fill="#6892bc"/>
+<polygon class="cube" points="817.5,86.0 796.7,98.0 796.7,122.0 817.5,110.0" fill="#547597"/>
+<text class="value" x="796.7" y="90.0" fill="#111111">1</text>
+<polygon class="cube" points="755.1,74.0 775.9,86.0 755.1,98.0 734.3,86.0" fill="#474747"/>
+<polygon class="cube" points="734.3,86.0 755.1,98.0 755.1,122.0 734.3,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="775.9,86.0 755.1,98.0 755.1,122.0 775.9,110.0" fill="#2f2f2f"/>
+<text class="value" x="755.1" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="713.5,74.0 734.3,86.0 713.5,98.0 692.8,86.0" fill="#474747"/>
+<polygon class="cube" points="692.8,86.0 713.5,98.0 713.5,122.0 692.8,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="734.3,86.0 713.5,98.0 713.5,122.0 734.3,110.0" fill="#2f2f2f"/>
+<text class="value" x="713.5" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="672.0,74.0 692.8,86.0 672.0,98.0 651.2,86.0" fill="#474747"/>
+<polygon class="cube" points="651.2,86.0 672.0,98.0 672.0,122.0 651.2,110.0" fill="#3a3a3a"/>
+<polygon class="cube" points="692.8,86.0 672.0,98.0 672.0,122.0 692.8,110.0" fill="#2f2f2f"/>
+<text class="value" x="672.0" y="90.0" fill="#ffffff">1</text>
+<polygon class="cube" points="817.5,86.0 838.2,98.0 817.5,110.0 796.7,98.0" fill="#7fb2e5"/>
+<polygon class="cube" points="796.7,98.0 817.5,110.0 817.5,134.0 796.7,122.0" fill="#6892bc"/>
+<polygon class="cube" points="838.2,98.0 817.5,110.0 817.5,134.0 838.2,122.0" fill="#547597"/>
+<text class="value" x="817.5" y="102.0" fill="#111111">1</text>
+<polygon class="cube" points="775.9,86.0 796.7,98.0 775.9,110.0 755.1,98.0" fill="#474747"/>
+<polygon class="cube" points="755.1,98.0 775.9,110.0 775.9,134.0 755.1,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="796.7,98.0 775.9,110.0 775.9,134.0 796.7,122.0" fill="#2f2f2f"/>
+<text class="value" x="775.9" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="734.3,86.0 755.1,98.0 734.3,110.0 713.5,98.0" fill="#474747"/>
+<polygon class="cube" points="713.5,98.0 734.3,110.0 734.3,134.0 713.5,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="755.1,98.0 734.3,110.0 734.3,134.0 755.1,122.0" fill="#2f2f2f"/>
+<text class="value" x="734.3" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="692.8,86.0 713.5,98.0 692.8,110.0 672.0,98.0" fill="#474747"/>
+<polygon class="cube" points="672.0,98.0 692.8,110.0 692.8,134.0 672.0,122.0" fill="#3a3a3a"/>
+<polygon class="cube" points="713.5,98.0 692.8,110.0 692.8,134.0 713.5,122.0" fill="#2f2f2f"/>
+<text class="value" x="692.8" y="102.0" fill="#ffffff">1</text>
+<polygon class="cube" points="796.7,98.0 817.5,110.0 796.7,122.0 775.9,110.0" fill="#474747"/>
+<polygon class="cube" points="775.9,110.0 796.7,122.0 796.7,146.0 775.9,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="817.5,110.0 796.7,122.0 796.7,146.0 817.5,134.0" fill="#2f2f2f"/>
+<text class="value" x="796.7" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="755.1,98.0 775.9,110.0 755.1,122.0 734.3,110.0" fill="#474747"/>
+<polygon class="cube" points="734.3,110.0 755.1,122.0 755.1,146.0 734.3,134.0" fill="#3a3a3a"/>
+<polygon class="cube" points="775.9,110.0 755.1,122.0 755.1,146.0 775.9,134.0" fill="#2f2f2f"/>
+<text class="value" x="755.1" y="114.0" fill="#ffffff">1</text>
+<polygon class="cube" points="713.5,98.0 734.3,110.0 713.5,122.0 692.8,110.0" fill="#b1b1b1"/>
+<polygon class="cube" points="692.8,110.0 713.5,122.0 713.5,146.0 692.8,134.0" fill="#919191"/>
+<polygon class="cube" points="734.3,110.0 713.5,122.0 713.5,146.0 734.3,134.0" fill="#757575"/>
+<text class="value" x="713.5" y="114.0" fill="#111111">6</text>
+<polygon class="cube" points="775.9,110.0 796.7,122.0 775.9,134.0 755.1,122.0" fill="#474747"/>
+<polygon class="cube" points="755.1,122.0 775.9,134.0 775.9,158.0 755.1,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="796.7,122.0 775.9,134.0 775.9,158.0 796.7,146.0" fill="#2f2f2f"/>
+<text class="value" x="775.9" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="734.3,110.0 755.1,122.0 734.3,134.0 713.5,122.0" fill="#474747"/>
+<polygon class="cube" points="713.5,122.0 734.3,134.0 734.3,158.0 713.5,146.0" fill="#3a3a3a"/>
+<polygon class="cube" points="755.1,122.0 734.3,134.0 734.3,158.0 755.1,146.0" fill="#2f2f2f"/>
+<text class="value" x="734.3" y="126.0" fill="#ffffff">1</text>
+<polygon class="cube" points="755.1,122.0 775.9,134.0 755.1,146.0 734.3,134.0" fill="#474747"/>
+<polygon class="cube" points="734.3,134.0 755.1,146.0 755.1,170.0 734.3,158.0" fill="#3a3a3a"/>
+<polygon class="cube" points="775.9,134.0 755.1,146.0 755.1,170.0 775.9,158.0" fill="#2f2f2f"/>
+<text class="value" x="755.1" y="138.0" fill="#ffffff">1</text>
+<text class="note" x="744.7" y="192.0" text-anchor="middle">Slice 4</text>
+<text class="label" x="12" y="231">Voxel map<tspan class="note" dx="10">GLCM joint entropy in the 3 × 3 × 3 neighborhood of each voxel</tspan></text>
+<polygon class="cube" points="95.1,242.0 115.9,254.0 95.1,266.0 74.4,254.0" fill="#2a788e"/>
+<polygon class="cube" points="74.4,254.0 95.1,266.0 95.1,290.0 74.4,278.0" fill="#226274"/>
+<polygon class="cube" points="115.9,254.0 95.1,266.0 95.1,290.0 115.9,278.0" fill="#1c4f5e"/>
+<polygon class="cube" points="115.9,254.0 136.7,266.0 115.9,278.0 95.1,266.0" fill="#39b777"/>
+<polygon class="cube" points="95.1,266.0 115.9,278.0 115.9,302.0 95.1,290.0" fill="#2f9662"/>
+<polygon class="cube" points="136.7,266.0 115.9,278.0 115.9,302.0 136.7,290.0" fill="#26794f"/>
+<polygon class="cube" points="74.4,254.0 95.1,266.0 74.4,278.0 53.6,266.0" fill="#27818d"/>
+<polygon class="cube" points="53.6,266.0 74.4,278.0 74.4,302.0 53.6,290.0" fill="#206a74"/>
+<polygon class="cube" points="95.1,266.0 74.4,278.0 74.4,302.0 95.1,290.0" fill="#1a555d"/>
+<polygon class="cube" points="136.7,266.0 157.5,278.0 136.7,290.0 115.9,278.0" fill="#4fc36a"/>
+<polygon class="cube" points="115.9,278.0 136.7,290.0 136.7,314.0 115.9,302.0" fill="#41a057"/>
+<polygon class="cube" points="157.5,278.0 136.7,290.0 136.7,314.0 157.5,302.0" fill="#348146"/>
+<polygon class="cube" points="95.1,266.0 115.9,278.0 95.1,290.0 74.4,278.0" fill="#93d641"/>
+<polygon class="cube" points="74.4,278.0 95.1,290.0 95.1,314.0 74.4,302.0" fill="#79af35"/>
+<polygon class="cube" points="115.9,278.0 95.1,290.0 95.1,314.0 115.9,302.0" fill="#618d2b"/>
+<polygon class="cube" points="53.6,266.0 74.4,278.0 53.6,290.0 32.8,278.0" fill="#25858d"/>
+<polygon class="cube" points="32.8,278.0 53.6,290.0 53.6,314.0 32.8,302.0" fill="#1e6d74"/>
+<polygon class="cube" points="74.4,278.0 53.6,290.0 53.6,314.0 74.4,302.0" fill="#18585d"/>
+<polygon class="cube" points="157.5,278.0 178.3,290.0 157.5,302.0 136.7,290.0" fill="#21948b"/>
+<polygon class="cube" points="136.7,290.0 157.5,302.0 157.5,326.0 136.7,314.0" fill="#1b7972"/>
+<polygon class="cube" points="178.3,290.0 157.5,302.0 157.5,326.0 178.3,314.0" fill="#16625c"/>
+<polygon class="cube" points="115.9,278.0 136.7,290.0 115.9,302.0 95.1,290.0" fill="#acdb31"/>
+<polygon class="cube" points="95.1,290.0 115.9,302.0 115.9,326.0 95.1,314.0" fill="#8db428"/>
+<polygon class="cube" points="136.7,290.0 115.9,302.0 115.9,326.0 136.7,314.0" fill="#729120"/>
+<polygon class="cube" points="74.4,278.0 95.1,290.0 74.4,302.0 53.6,290.0" fill="#addc30"/>
+<polygon class="cube" points="53.6,290.0 74.4,302.0 74.4,326.0 53.6,314.0" fill="#8eb427"/>
+<polygon class="cube" points="95.1,290.0 74.4,302.0 74.4,326.0 95.1,314.0" fill="#729120"/>
+<polygon class="cube" points="32.8,278.0 53.6,290.0 32.8,302.0 12.0,290.0" fill="#355f8d"/>
+<polygon class="cube" points="12.0,290.0 32.8,302.0 32.8,326.0 12.0,314.0" fill="#2b4e74"/>
+<polygon class="cube" points="53.6,290.0 32.8,302.0 32.8,326.0 53.6,314.0" fill="#233f5d"/>
+<polygon class="cube" points="178.3,290.0 199.1,302.0 178.3,314.0 157.5,302.0" fill="#440154"/>
+<polygon class="cube" points="157.5,302.0 178.3,314.0 178.3,338.0 157.5,326.0" fill="#380145"/>
+<polygon class="cube" points="199.1,302.0 178.3,314.0 178.3,338.0 199.1,326.0" fill="#2d0137"/>
+<polygon class="cube" points="136.7,290.0 157.5,302.0 136.7,314.0 115.9,302.0" fill="#4ec26a"/>
+<polygon class="cube" points="115.9,302.0 136.7,314.0 136.7,338.0 115.9,326.0" fill="#409f57"/>
+<polygon class="cube" points="157.5,302.0 136.7,314.0 136.7,338.0 157.5,326.0" fill="#338046"/>
+<polygon class="cube" points="95.1,290.0 115.9,302.0 95.1,314.0 74.4,302.0" fill="#81d24d"/>
+<polygon class="cube" points="74.4,302.0 95.1,314.0 95.1,338.0 74.4,326.0" fill="#6aac3f"/>
+<polygon class="cube" points="115.9,302.0 95.1,314.0 95.1,338.0 115.9,326.0" fill="#558b33"/>
+<polygon class="cube" points="53.6,290.0 74.4,302.0 53.6,314.0 32.8,302.0" fill="#42be71"/>
+<polygon class="cube" points="32.8,302.0 53.6,314.0 53.6,338.0 32.8,326.0" fill="#369c5d"/>
+<polygon class="cube" points="74.4,302.0 53.6,314.0 53.6,338.0 74.4,326.0" fill="#2c7d4b"/>
+<polygon class="cube" points="157.5,302.0 178.3,314.0 157.5,326.0 136.7,314.0" fill="#423f84"/>
+<polygon class="cube" points="136.7,314.0 157.5,326.0 157.5,350.0 136.7,338.0" fill="#36346c"/>
+<polygon class="cube" points="178.3,314.0 157.5,326.0 157.5,350.0 178.3,338.0" fill="#2c2a57"/>
+<polygon class="cube" points="115.9,302.0 136.7,314.0 115.9,326.0 95.1,314.0" fill="#6fcd57"/>
+<polygon class="cube" points="95.1,314.0 115.9,326.0 115.9,350.0 95.1,338.0" fill="#5ba847"/>
+<polygon class="cube" points="136.7,314.0 115.9,326.0 115.9,350.0 136.7,338.0" fill="#498739"/>
+<polygon class="cube" points="74.4,302.0 95.1,314.0 74.4,326.0 53.6,314.0" fill="#47c06e"/>
+<polygon class="cube" points="53.6,314.0 74.4,326.0 74.4,350.0 53.6,338.0" fill="#3a9d5a"/>
+<polygon class="cube" points="95.1,314.0 74.4,326.0 74.4,350.0 95.1,338.0" fill="#2f7f49"/>
+<polygon class="cube" points="136.7,314.0 157.5,326.0 136.7,338.0 115.9,326.0" fill="#32678d"/>
+<polygon class="cube" points="115.9,326.0 136.7,338.0 136.7,362.0 115.9,350.0" fill="#295474"/>
+<polygon class="cube" points="157.5,326.0 136.7,338.0 136.7,362.0 157.5,350.0" fill="#21445d"/>
+<polygon class="cube" points="95.1,314.0 115.9,326.0 95.1,338.0 74.4,326.0" fill="#4ec26a"/>
+<polygon class="cube" points="74.4,326.0 95.1,338.0 95.1,362.0 74.4,350.0" fill="#409f57"/>
+<polygon class="cube" points="115.9,326.0 95.1,338.0 95.1,362.0 115.9,350.0" fill="#338046"/>
+<polygon class="cube" points="115.9,326.0 136.7,338.0 115.9,350.0 95.1,338.0" fill="#32668d"/>
+<polygon class="cube" points="95.1,338.0 115.9,350.0 115.9,374.0 95.1,362.0" fill="#295474"/>
+<polygon class="cube" points="136.7,338.0 115.9,350.0 115.9,374.0 136.7,362.0" fill="#21435d"/>
+<polygon class="cube" points="308.2,242.0 329.0,254.0 308.2,266.0 287.4,254.0" fill="#27808d"/>
+<polygon class="cube" points="287.4,254.0 308.2,266.0 308.2,290.0 287.4,278.0" fill="#206974"/>
+<polygon class="cube" points="329.0,254.0 308.2,266.0 308.2,290.0 329.0,278.0" fill="#1a545d"/>
+<polygon class="cube" points="329.0,254.0 349.8,266.0 329.0,278.0 308.2,266.0" fill="#42be71"/>
+<polygon class="cube" points="308.2,266.0 329.0,278.0 329.0,302.0 308.2,290.0" fill="#369c5d"/>
+<polygon class="cube" points="349.8,266.0 329.0,278.0 329.0,302.0 349.8,290.0" fill="#2c7d4b"/>
+<polygon class="cube" points="287.4,254.0 308.2,266.0 287.4,278.0 266.6,266.0" fill="#26828d"/>
+<polygon class="cube" points="266.6,266.0 287.4,278.0 287.4,302.0 266.6,290.0" fill="#1f6b74"/>
+<polygon class="cube" points="308.2,266.0 287.4,278.0 287.4,302.0 308.2,290.0" fill="#19565d"/>
+<polygon class="cube" points="349.8,266.0 370.6,278.0 349.8,290.0 329.0,278.0" fill="#6acc5a"/>
+<polygon class="cube" points="329.0,278.0 349.8,290.0 349.8,314.0 329.0,302.0" fill="#57a74a"/>
+<polygon class="cube" points="370.6,278.0 349.8,290.0 349.8,314.0 370.6,302.0" fill="#46873b"/>
+<polygon class="cube" points="308.2,266.0 329.0,278.0 308.2,290.0 287.4,278.0" fill="#97d73f"/>
+<polygon class="cube" points="287.4,278.0 308.2,290.0 308.2,314.0 287.4,302.0" fill="#7cb034"/>
+<polygon class="cube" points="329.0,278.0 308.2,290.0 308.2,314.0 329.0,302.0" fill="#648e2a"/>
+<polygon class="cube" points="370.6,278.0 391.3,290.0 370.6,302.0 349.8,290.0" fill="#219989"/>
+<polygon class="cube" points="349.8,290.0 370.6,302.0 370.6,326.0 349.8,314.0" fill="#1b7d70"/>
+<polygon class="cube" points="391.3,290.0 370.6,302.0 370.6,326.0 391.3,314.0" fill="#16655a"/>
+<polygon class="cube" points="329.0,278.0 349.8,290.0 329.0,302.0 308.2,290.0" fill="#d6e226"/>
+<polygon class="cube" points="308.2,290.0 329.0,302.0 329.0,326.0 308.2,314.0" fill="#afb91f"/>
+<polygon class="cube" points="349.8,290.0 329.0,302.0 329.0,326.0 349.8,314.0" fill="#8d9519"/>
+<polygon class="cube" points="287.4,278.0 308.2,290.0 287.4,302.0 266.6,290.0" fill="#c6e026"/>
+<polygon class="cube" points="266.6,290.0 287.4,302.0 287.4,326.0 266.6,314.0" fill="#a2b81f"/>
+<polygon class="cube" points="308.2,290.0 287.4,302.0 287.4,326.0 308.2,314.0" fill="#839419"/>
+<polygon class="cube" points="245.8,278.0 266.6,290.0 245.8,302.0 225.1,290.0" fill="#24888d"/>
+<polygon class="cube" points="225.1,290.0 245.8,302.0 245.8,326.0 225.1,314.0" fill="#1e7074"/>
+<polygon class="cube" points="266.6,290.0 245.8,302.0 245.8,326.0 266.6,314.0" fill="#185a5d"/>
+<polygon class="cube" points="391.3,290.0 412.1,302.0 391.3,314.0 370.6,302.0" fill="#440154"/>
+<polygon class="cube" points="370.6,302.0 391.3,314.0 391.3,338.0 370.6,326.0" fill="#380145"/>
+<polygon class="cube" points="412.1,302.0 391.3,314.0 391.3,338.0 412.1,326.0" fill="#2d0137"/>
+<polygon class="cube" points="349.8,290.0 370.6,302.0 349.8,314.0 329.0,302.0" fill="#41bd72"/>
+<polygon class="cube" points="329.0,302.0 349.8,314.0 349.8,338.0 329.0,326.0" fill="#359b5d"/>
+<polygon class="cube" points="370.6,302.0 349.8,314.0 349.8,338.0 370.6,326.0" fill="#2b7d4b"/>
+<polygon class="cube" points="308.2,290.0 329.0,302.0 308.2,314.0 287.4,302.0" fill="#a5da36"/>
+<polygon class="cube" points="287.4,302.0 308.2,314.0 308.2,338.0 287.4,326.0" fill="#87b32c"/>
+<polygon class="cube" points="329.0,302.0 308.2,314.0 308.2,338.0 329.0,326.0" fill="#6d9024"/>
+<polygon class="cube" points="266.6,290.0 287.4,302.0 266.6,314.0 245.8,302.0" fill="#84d34b"/>
+<polygon class="cube" points="245.8,302.0 266.6,314.0 266.6,338.0 245.8,326.0" fill="#6cad3d"/>
+<polygon class="cube" points="287.4,302.0 266.6,314.0 266.6,338.0 287.4,326.0" fill="#578b32"/>
+<polygon class="cube" points="370.6,302.0 391.3,314.0 370.6,326.0 349.8,314.0" fill="#45337d"/>
+<polygon class="cube" points="349.8,314.0 370.6,326.0 370.6,350.0 349.8,338.0" fill="#392a66"/>
+<polygon class="cube" points="391.3,314.0 370.6,326.0 370.6,350.0 391.3,338.0" fill="#2e2252"/>
+<polygon class="cube" points="329.0,302.0 349.8,314.0 329.0,326.0 308.2,314.0" fill="#52c468"/>
+<polygon class="cube" points="308.2,314.0 329.0,326.0 329.0,350.0 308.2,338.0" fill="#43a155"/>
+<polygon class="cube" points="349.8,314.0 329.0,326.0 329.0,350.0 349.8,338.0" fill="#368145"/>
+<polygon class="cube" points="287.4,302.0 308.2,314.0 287.4,326.0 266.6,314.0" fill="#71ce56"/>
+<polygon class="cube" points="266.6,314.0 287.4,326.0 287.4,350.0 266.6,338.0" fill="#5da947"/>
+<polygon class="cube" points="308.2,314.0 287.4,326.0 287.4,350.0 308.2,338.0" fill="#4b8839"/>
+<polygon class="cube" points="349.8,314.0 370.6,326.0 349.8,338.0 329.0,326.0" fill="#39558b"/>
+<polygon class="cube" points="329.0,326.0 349.8,338.0 349.8,362.0 329.0,350.0" fill="#2f4672"/>
+<polygon class="cube" points="370.6,326.0 349.8,338.0 349.8,362.0 370.6,350.0" fill="#26385c"/>
+<polygon class="cube" points="308.2,314.0 329.0,326.0 308.2,338.0 287.4,326.0" fill="#54c467"/>
+<polygon class="cube" points="287.4,326.0 308.2,338.0 308.2,362.0 287.4,350.0" fill="#45a154"/>
+<polygon class="cube" points="329.0,326.0 308.2,338.0 308.2,362.0 329.0,350.0" fill="#378144"/>
+<polygon class="cube" points="329.0,326.0 349.8,338.0 329.0,350.0 308.2,338.0" fill="#34618d"/>
+<polygon class="cube" points="308.2,338.0 329.0,350.0 329.0,374.0 308.2,362.0" fill="#2b5074"/>
+<polygon class="cube" points="349.8,338.0 329.0,350.0 329.0,374.0 349.8,362.0" fill="#22405d"/>
+<polygon class="cube" points="521.3,242.0 542.0,254.0 521.3,266.0 500.5,254.0" fill="#32668d"/>
+<polygon class="cube" points="500.5,254.0 521.3,266.0 521.3,290.0 500.5,278.0" fill="#295474"/>
+<polygon class="cube" points="542.0,254.0 521.3,266.0 521.3,290.0 542.0,278.0" fill="#21435d"/>
+<polygon class="cube" points="542.0,254.0 562.8,266.0 542.0,278.0 521.3,266.0" fill="#229e87"/>
+<polygon class="cube" points="521.3,266.0 542.0,278.0 542.0,302.0 521.3,290.0" fill="#1c826f"/>
+<polygon class="cube" points="562.8,266.0 542.0,278.0 542.0,302.0 562.8,290.0" fill="#166859"/>
+<polygon class="cube" points="500.5,254.0 521.3,266.0 500.5,278.0 479.7,266.0" fill="#32658d"/>
+<polygon class="cube" points="479.7,266.0 500.5,278.0 500.5,302.0 479.7,290.0" fill="#295374"/>
+<polygon class="cube" points="521.3,266.0 500.5,278.0 500.5,302.0 521.3,290.0" fill="#21435d"/>
+<polygon class="cube" points="562.8,266.0 583.6,278.0 562.8,290.0 542.0,278.0" fill="#229d88"/>
+<polygon class="cube" points="542.0,278.0 562.8,290.0 562.8,314.0 542.0,302.0" fill="#1c8170"/>
+<polygon class="cube" points="583.6,278.0 562.8,290.0 562.8,314.0 583.6,302.0" fill="#16685a"/>
+<polygon class="cube" points="521.3,266.0 542.0,278.0 521.3,290.0 500.5,278.0" fill="#23a984"/>
+<polygon class="cube" points="500.5,278.0 521.3,290.0 521.3,314.0 500.5,302.0" fill="#1d8b6c"/>
+<polygon class="cube" points="542.0,278.0 521.3,290.0 521.3,314.0 542.0,302.0" fill="#177057"/>
+<polygon class="cube" points="479.7,266.0 500.5,278.0 479.7,290.0 458.9,278.0" fill="#404687"/>
+<polygon class="cube" points="458.9,278.0 479.7,290.0 479.7,314.0 458.9,302.0" fill="#34396f"/>
+<polygon class="cube" points="500.5,278.0 479.7,290.0 479.7,314.0 500.5,302.0" fill="#2a2e59"/>
+<polygon class="cube" points="542.0,278.0 562.8,290.0 542.0,302.0 521.3,290.0" fill="#4ac16c"/>
+<polygon class="cube" points="521.3,290.0 542.0,302.0 542.0,326.0 521.3,314.0" fill="#3d9e59"/>
+<polygon class="cube" points="562.8,290.0 542.0,302.0 542.0,326.0 562.8,314.0" fill="#317f47"/>
+<polygon class="cube" points="500.5,278.0 521.3,290.0 500.5,302.0 479.7,290.0" fill="#219989"/>
+<polygon class="cube" points="479.7,290.0 500.5,302.0 500.5,326.0 479.7,314.0" fill="#1b7d70"/>
+<polygon class="cube" points="521.3,290.0 500.5,302.0 500.5,326.0 521.3,314.0" fill="#16655a"/>
+<polygon class="cube" points="458.9,278.0 479.7,290.0 458.9,302.0 438.1,290.0" fill="#38598c"/>
+<polygon class="cube" points="438.1,290.0 458.9,302.0 458.9,326.0 438.1,314.0" fill="#2e4973"/>
+<polygon class="cube" points="479.7,290.0 458.9,302.0 458.9,326.0 479.7,314.0" fill="#253b5c"/>
+<polygon class="cube" points="562.8,290.0 583.6,302.0 562.8,314.0 542.0,302.0" fill="#27808d"/>
+<polygon class="cube" points="542.0,302.0 562.8,314.0 562.8,338.0 542.0,326.0" fill="#206974"/>
+<polygon class="cube" points="583.6,302.0 562.8,314.0 562.8,338.0 583.6,326.0" fill="#1a545d"/>
+<polygon class="cube" points="479.7,290.0 500.5,302.0 479.7,314.0 458.9,302.0" fill="#24aa83"/>
+<polygon class="cube" points="458.9,302.0 479.7,314.0 479.7,338.0 458.9,326.0" fill="#1e8b6b"/>
+<polygon class="cube" points="500.5,302.0 479.7,314.0 479.7,338.0 500.5,326.0" fill="#187056"/>
+<polygon class="cube" points="583.6,302.0 604.4,314.0 583.6,326.0 562.8,314.0" fill="#440154"/>
+<polygon class="cube" points="562.8,314.0 583.6,326.0 583.6,350.0 562.8,338.0" fill="#380145"/>
+<polygon class="cube" points="604.4,314.0 583.6,326.0 583.6,350.0 604.4,338.0" fill="#2d0137"/>
+<polygon class="cube" points="542.0,302.0 562.8,314.0 542.0,326.0 521.3,314.0" fill="#2d718e"/>
+<polygon class="cube" points="521.3,314.0 542.0,326.0 542.0,350.0 521.3,338.0" fill="#255d74"/>
+<polygon class="cube" points="562.8,314.0 542.0,326.0 542.0,350.0 562.8,338.0" fill="#1e4b5e"/>
+<polygon class="cube" points="500.5,302.0 521.3,314.0 500.5,326.0 479.7,314.0" fill="#2cae7e"/>
+<polygon class="cube" points="479.7,314.0 500.5,326.0 500.5,350.0 479.7,338.0" fill="#248f67"/>
+<polygon class="cube" points="521.3,314.0 500.5,326.0 500.5,350.0 521.3,338.0" fill="#1d7353"/>
+<polygon class="cube" points="562.8,314.0 583.6,326.0 562.8,338.0 542.0,326.0" fill="#440154"/>
+<polygon class="cube" points="542.0,326.0 562.8,338.0 562.8,362.0 542.0,350.0" fill="#380145"/>
+<polygon class="cube" points="583.6,326.0 562.8,338.0 562.8,362.0 583.6,350.0" fill="#2d0137"/>
+<polygon class="cube" points="521.3,314.0 542.0,326.0 521.3,338.0 500.5,326.0" fill="#2b758e"/>
+<polygon class="cube" points="500.5,326.0 521.3,338.0 521.3,362.0 500.5,350.0" fill="#236074"/>
+<polygon class="cube" points="542.0,326.0 521.3,338.0 521.3,362.0 542.0,350.0" fill="#1c4d5e"/>
+<polygon class="cube" points="542.0,326.0 562.8,338.0 542.0,350.0 521.3,338.0" fill="#440154"/>
+<polygon class="cube" points="521.3,338.0 542.0,350.0 542.0,374.0 521.3,362.0" fill="#380145"/>
+<polygon class="cube" points="562.8,338.0 542.0,350.0 542.0,374.0 562.8,362.0" fill="#2d0137"/>
+<polygon class="cube" points="734.3,242.0 755.1,254.0 734.3,266.0 713.5,254.0" fill="#32668d"/>
+<polygon class="cube" points="713.5,254.0 734.3,266.0 734.3,290.0 713.5,278.0" fill="#295474"/>
+<polygon class="cube" points="755.1,254.0 734.3,266.0 734.3,290.0 755.1,278.0" fill="#21435d"/>
+<polygon class="cube" points="755.1,254.0 775.9,266.0 755.1,278.0 734.3,266.0" fill="#238a8d"/>
+<polygon class="cube" points="734.3,266.0 755.1,278.0 755.1,302.0 734.3,290.0" fill="#1d7174"/>
+<polygon class="cube" points="775.9,266.0 755.1,278.0 755.1,302.0 775.9,290.0" fill="#175b5d"/>
+<polygon class="cube" points="713.5,254.0 734.3,266.0 713.5,278.0 692.8,266.0" fill="#34618d"/>
+<polygon class="cube" points="692.8,266.0 713.5,278.0 713.5,302.0 692.8,290.0" fill="#2b5074"/>
+<polygon class="cube" points="734.3,266.0 713.5,278.0 713.5,302.0 734.3,290.0" fill="#22405d"/>
+<polygon class="cube" points="775.9,266.0 796.7,278.0 775.9,290.0 755.1,278.0" fill="#32668d"/>
+<polygon class="cube" points="755.1,278.0 775.9,290.0 775.9,314.0 755.1,302.0" fill="#295474"/>
+<polygon class="cube" points="796.7,278.0 775.9,290.0 775.9,314.0 796.7,302.0" fill="#21435d"/>
+<polygon class="cube" points="734.3,266.0 755.1,278.0 734.3,290.0 713.5,278.0" fill="#26828d"/>
+<polygon class="cube" points="713.5,278.0 734.3,290.0 734.3,314.0 713.5,302.0" fill="#1f6b74"/>
+<polygon class="cube" points="755.1,278.0 734.3,290.0 734.3,314.0 755.1,302.0" fill="#19565d"/>
+<polygon class="cube" points="692.8,266.0 713.5,278.0 692.8,290.0 672.0,278.0" fill="#440154"/>
+<polygon class="cube" points="672.0,278.0 692.8,290.0 692.8,314.0 672.0,302.0" fill="#380145"/>
+<polygon class="cube" points="713.5,278.0 692.8,290.0 692.8,314.0 713.5,302.0" fill="#2d0137"/>
+<polygon class="cube" points="755.1,278.0 775.9,290.0 755.1,302.0 734.3,290.0" fill="#287d8e"/>
+<polygon class="cube" points="734.3,290.0 755.1,302.0 755.1,326.0 734.3,314.0" fill="#216674"/>
+<polygon class="cube" points="775.9,290.0 755.1,302.0 755.1,326.0 775.9,314.0" fill="#1a525e"/>
+<polygon class="cube" points="713.5,278.0 734.3,290.0 713.5,302.0 692.8,290.0" fill="#404687"/>
+<polygon class="cube" points="692.8,290.0 713.5,302.0 713.5,326.0 692.8,314.0" fill="#34396f"/>
+<polygon class="cube" points="734.3,290.0 713.5,302.0 713.5,326.0 734.3,314.0" fill="#2a2e59"/>
+<polygon class="cube" points="672.0,278.0 692.8,290.0 672.0,302.0 651.2,290.0" fill="#440154"/>
+<polygon class="cube" points="651.2,290.0 672.0,302.0 672.0,326.0 651.2,314.0" fill="#380145"/>
+<polygon class="cube" points="692.8,290.0 672.0,302.0 672.0,326.0 692.8,314.0" fill="#2d0137"/>
+<polygon class="cube" points="775.9,290.0 796.7,302.0 775.9,314.0 755.1,302.0" fill="#414487"/>
+<polygon class="cube" points="755.1,302.0 775.9,314.0 775.9,338.0 755.1,326.0" fill="#35386f"/>
+<polygon class="cube" points="796.7,302.0 775.9,314.0 775.9,338.0 796.7,326.0" fill="#2b2d59"/>
+<polygon class="cube" points="734.3,290.0 755.1,302.0 734.3,314.0 713.5,302.0" fill="#2f6c8e"/>
+<polygon class="cube" points="713.5,302.0 734.3,314.0 734.3,338.0 713.5,326.0" fill="#275974"/>
+<polygon class="cube" points="755.1,302.0 734.3,314.0 734.3,338.0 755.1,326.0" fill="#1f475e"/>
+<polygon class="cube" points="692.8,290.0 713.5,302.0 692.8,314.0 672.0,302.0" fill="#38598c"/>
+<polygon class="cube" points="672.0,302.0 692.8,314.0 692.8,338.0 672.0,326.0" fill="#2e4973"/>
+<polygon class="cube" points="713.5,302.0 692.8,314.0 692.8,338.0 713.5,326.0" fill="#253b5c"/>
+<polygon class="cube" points="796.7,302.0 817.5,314.0 796.7,326.0 775.9,314.0" fill="#440154"/>
+<polygon class="cube" points="775.9,314.0 796.7,326.0 796.7,350.0 775.9,338.0" fill="#380145"/>
+<polygon class="cube" points="817.5,314.0 796.7,326.0 796.7,350.0 817.5,338.0" fill="#2d0137"/>
+<polygon class="cube" points="755.1,302.0 775.9,314.0 755.1,326.0 734.3,314.0" fill="#404687"/>
+<polygon class="cube" points="734.3,314.0 755.1,326.0 755.1,350.0 734.3,338.0" fill="#34396f"/>
+<polygon class="cube" points="775.9,314.0 755.1,326.0 755.1,350.0 775.9,338.0" fill="#2a2e59"/>
+<polygon class="cube" points="713.5,302.0 734.3,314.0 713.5,326.0 692.8,314.0" fill="#29798e"/>
+<polygon class="cube" points="692.8,314.0 713.5,326.0 713.5,350.0 692.8,338.0" fill="#226374"/>
+<polygon class="cube" points="734.3,314.0 713.5,326.0 713.5,350.0 734.3,338.0" fill="#1b505e"/>
+<polygon class="cube" points="775.9,314.0 796.7,326.0 775.9,338.0 755.1,326.0" fill="#440154"/>
+<polygon class="cube" points="755.1,326.0 775.9,338.0 775.9,362.0 755.1,350.0" fill="#380145"/>
+<polygon class="cube" points="796.7,326.0 775.9,338.0 775.9,362.0 796.7,350.0" fill="#2d0137"/>
+<polygon class="cube" points="734.3,314.0 755.1,326.0 734.3,338.0 713.5,326.0" fill="#38598c"/>
+<polygon class="cube" points="713.5,326.0 734.3,338.0 734.3,362.0 713.5,350.0" fill="#2e4973"/>
+<polygon class="cube" points="755.1,326.0 734.3,338.0 734.3,362.0 755.1,350.0" fill="#253b5c"/>
+<polygon class="cube" points="755.1,326.0 775.9,338.0 755.1,350.0 734.3,338.0" fill="#440154"/>
+<polygon class="cube" points="734.3,338.0 755.1,350.0 755.1,374.0 734.3,362.0" fill="#380145"/>
+<polygon class="cube" points="775.9,338.0 755.1,350.0 755.1,374.0 775.9,362.0" fill="#2d0137"/>
+<defs><linearGradient id="viridis"><stop offset="0.00" stop-color="#440154"/><stop offset="0.10" stop-color="#482475"/><stop offset="0.20" stop-color="#414487"/><stop offset="0.30" stop-color="#355f8d"/><stop offset="0.40" stop-color="#2a788e"/><stop offset="0.50" stop-color="#21918c"/><stop offset="0.60" stop-color="#22a884"/><stop offset="0.70" stop-color="#44bf70"/><stop offset="0.80" stop-color="#7ad151"/><stop offset="0.90" stop-color="#bddf26"/><stop offset="1.00" stop-color="#fde725"/></linearGradient></defs>
+<text class="note" x="648.2" y="388.0" text-anchor="end">Joint entropy (bits)</text>
+<rect x="658.2" y="380.0" width="180" height="8" fill="url(#viridis)"/>
+<text class="note" x="658.2" y="402.0" text-anchor="middle">0</text>
+<text class="note" x="718.2" y="402.0" text-anchor="middle">1</text>
+<text class="note" x="778.2" y="402.0" text-anchor="middle">2</text>
+<text class="note" x="838.2" y="402.0" text-anchor="middle">3</text>
+</svg>

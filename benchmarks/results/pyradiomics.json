@@ -1,0 +1,43 @@
+{
+  "title": "Extracting 93 PyRadiomics features from one lung CT tumor",
+  "subtitle": "NSCLC-Radiomics LUNG1-001, 54,639-voxel tumor · Apple M5 Max · median warm call of six fresh processes",
+  "measured": "2026-11-24 with perfkit benchmark pair; parity within rtol 1e-6, atol 1e-9 for all 93 values",
+  "note": "rustradiomics was measured with the 1.0.0 wheel, published under its earlier name rustrad",
+  "variants": [
+    {
+      "key": "pyradiomics",
+      "label": "PyRadiomics",
+      "detail": "3.1.1.dev111, CPU",
+      "ours": false,
+      "warm_ms": 742.3905,
+      "first_call_ms": 796.0332,
+      "peak_footprint_delta_mb": 305.8
+    },
+    {
+      "key": "rustradiomics_1_thread",
+      "label": "rustradiomics",
+      "detail": "1 CPU thread",
+      "ours": true,
+      "warm_ms": 14.4846,
+      "first_call_ms": 32.2346,
+      "peak_footprint_delta_mb": 11.99,
+      "warm_speedup_interval_97": [
+        51.1,
+        51.6
+      ]
+    },
+    {
+      "key": "rustradiomics_18_threads",
+      "label": "rustradiomics",
+      "detail": "18 CPU threads",
+      "ours": true,
+      "warm_ms": 5.3689,
+      "first_call_ms": 23.8605,
+      "peak_footprint_delta_mb": 29.93,
+      "warm_speedup_interval_97": [
+        136.3,
+        141.7
+      ]
+    }
+  ]
+}

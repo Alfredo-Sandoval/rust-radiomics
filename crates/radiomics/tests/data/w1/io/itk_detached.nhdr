@@ -1,0 +1,13 @@
+NRRD0004
+# Complete NRRD file format specification at:
+# http://teem.sourceforge.net/nrrd/format.html
+type: short
+dimension: 3
+space: left-posterior-superior
+sizes: 5 3 4
+space directions: (0.65262914192422405,0.25313080237547336,0) (-0.45977239321397773,1.1853984566390292,-0.27099786979992946) (-0.16584109680648401,0.42757630319539042,2.1516680123931264)
+kinds: domain domain domain
+endian: little
+encoding: raw
+space origin: (11,-7,4)
+data file: itk_detached.raw

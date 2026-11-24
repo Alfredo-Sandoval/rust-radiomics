@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" width="850" height="240" role="img">
+<title>Extracting 93 PyRadiomics features from one lung CT tumor</title>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}.label{font-size:14px;font-weight:600;fill:#1f2328}.note{font-size:12px;fill:#6e7781}.value{font-size:13px;fill:#1f2328;font-variant-numeric:tabular-nums;paint-order:stroke;stroke:#ffffff;stroke-width:5px;stroke-linejoin:round}.tick{font-size:12px;fill:#6e7781;text-anchor:middle;font-variant-numeric:tabular-nums}</style>
+<rect width="850" height="240" fill="#ffffff"/>
+<text class="label" x="12" y="24">Extracting 93 PyRadiomics features from one lung CT tumor</text>
+<text class="note" x="12" y="43">NSCLC-Radiomics LUNG1-001, 54,639-voxel tumor · Apple M5 Max · median warm call of six fresh processes</text>
+<line x1="180.0" y1="54" x2="180.0" y2="196" stroke="#d8dee4" stroke-width="1"/>
+<text class="tick" x="180.0" y="214">0</text>
+<line x1="310.0" y1="54" x2="310.0" y2="196" stroke="#d8dee4" stroke-width="1"/>
+<text class="tick" x="310.0" y="214">200</text>
+<line x1="440.0" y1="54" x2="440.0" y2="196" stroke="#d8dee4" stroke-width="1"/>
+<text class="tick" x="440.0" y="214">400</text>
+<line x1="570.0" y1="54" x2="570.0" y2="196" stroke="#d8dee4" stroke-width="1"/>
+<text class="tick" x="570.0" y="214">600</text>
+<line x1="700.0" y1="54" x2="700.0" y2="196" stroke="#d8dee4" stroke-width="1"/>
+<text class="tick" x="700.0" y="214">800</text>
+<text class="tick" x="440.0" y="232">Warm call time (ms), lower is faster</text>
+<text class="label" x="12" y="78">PyRadiomics</text>
+<text class="note" x="12" y="95">3.1.1.dev111, CPU</text>
+<path d="M180.0,72.0h478.6a4,4 0 0 1 4,4v10.0a4,4 0 0 1 -4,4h-478.6z" fill="#8c959f"/>
+<text class="value" x="670.6" y="85.5">742 ms</text>
+<text class="label" x="12" y="124">rustradiomics</text>
+<text class="note" x="12" y="141">1 CPU thread</text>
+<path d="M180.0,118.0h5.4a4,4 0 0 1 4,4v10.0a4,4 0 0 1 -4,4h-5.4z" fill="#2a78d6"/>
+<text class="value" x="197.4" y="131.5">14.5 ms · 51× faster than PyRadiomics</text>
+<text class="label" x="12" y="170">rustradiomics</text>
+<text class="note" x="12" y="187">18 CPU threads</text>
+<path d="M180.0,164.0h0.0a4,4 0 0 1 4,4v10.0a4,4 0 0 1 -4,4h-0.0z" fill="#2a78d6"/>
+<text class="value" x="192.0" y="177.5">5.37 ms · 138× faster than PyRadiomics</text>
+</svg>
