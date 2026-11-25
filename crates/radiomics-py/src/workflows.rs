@@ -8,6 +8,7 @@ use pythonize::{PythonizeTypes, PythonizeUnnamedMappingAdapter};
 use radiomics::__private::ExportProvenance;
 use radiomics::ExtractionResult;
 use radiomics::FeatureValue;
+use radiomics::LesionOptions;
 use std::path::PathBuf;
 
 // Python geometry, spacing and settings sequences retain their tuple representation.
@@ -117,6 +118,129 @@ pub(crate) fn extract_files<'py>(
         })
     })?;
     python_result(py, result)
+}
+
+// index, voxels, lower, upper, features, metadata
+type PyLesion<'py> = (
+    usize,
+    usize,
+    Vec<usize>,
+    Vec<usize>,
+    Bound<'py, PyDict>,
+    Bound<'py, PyAny>,
+);
+
+fn python_lesions<'py>(
+    py: Python<'py>,
+    lesions: Vec<radiomics::Lesion>,
+    source_dtype: Option<&str>,
+) -> PyResult<Vec<PyLesion<'py>>> {
+    lesions
+        .into_iter()
+        .map(|mut lesion| {
+            if let Some(dtype) = source_dtype {
+                lesion.result.metadata.array_dtype = dtype.to_owned();
+            }
+            let (features, metadata) = python_result(py, lesion.result)?;
+            Ok((
+                lesion.index,
+                lesion.voxels,
+                lesion.lower,
+                lesion.upper,
+                features,
+                metadata,
+            ))
+        })
+        .collect()
+}
+
+#[pyfunction]
+pub(crate) fn label_lesions<'py>(
+    py: Python<'py>,
+    mask: &Bound<'py, PyUntypedArray>,
+    label: i64,
+    min_voxels: usize,
+    max_lesions: Option<usize>,
+) -> PyResult<Bound<'py, PyAny>> {
+    let mask = arrays::host(mask)?;
+    let options = LesionOptions {
+        min_voxels,
+        max_lesions,
+    };
+    let labels = py
+        .detach(|| radiomics::label_lesions(&mask, label, &options))
+        .map_err(crate::map_error)?;
+    Ok(labels.into_pyarray(py).into_any())
+}
+
+#[pyfunction]
+#[allow(clippy::too_many_arguments)]
+pub(crate) fn extract_lesions<'py>(
+    py: Python<'py>,
+    image: &Bound<'py, PyUntypedArray>,
+    mask: &Bound<'py, PyUntypedArray>,
+    settings: &Bound<'_, PyAny>,
+    transforms: &Bound<'_, PyAny>,
+    spacing: Option<Vec<f64>>,
+    min_voxels: usize,
+    max_lesions: Option<usize>,
+) -> PyResult<Vec<PyLesion<'py>>> {
+    let source_dtype = image.dtype().str()?.to_str()?.to_owned();
+    let image = arrays::host(image)?;
+    let mask = arrays::host(mask)?;
+    let settings = config::settings(settings)?;
+    let transforms = config::transforms(transforms)?;
+    let options = LesionOptions {
+        min_voxels,
+        max_lesions,
+    };
+    let lesions = py
+        .detach(|| {
+            radiomics::extract_lesions(
+                &image,
+                &mask,
+                &settings,
+                &transforms,
+                spacing.as_deref().filter(|axes| !axes.is_empty()),
+                &options,
+            )
+        })
+        .map_err(crate::map_error)?;
+    python_lesions(py, lesions, Some(&source_dtype))
+}
+
+#[pyfunction]
+#[allow(clippy::too_many_arguments)]
+pub(crate) fn extract_lesions_files<'py>(
+    py: Python<'py>,
+    image_path: PathBuf,
+    mask_path: PathBuf,
+    settings: &Bound<'_, PyAny>,
+    image_settings: &Bound<'_, PyAny>,
+    transforms: &Bound<'_, PyAny>,
+    min_voxels: usize,
+    max_lesions: Option<usize>,
+) -> PyResult<Vec<PyLesion<'py>>> {
+    let settings = config::settings(settings)?;
+    let spatial = config::image_settings(image_settings)?;
+    let transforms = config::transforms(transforms)?;
+    let options = LesionOptions {
+        min_voxels,
+        max_lesions,
+    };
+    let lesions = py
+        .detach(|| {
+            radiomics::extract_lesions_files(
+                &image_path,
+                &mask_path,
+                &settings,
+                &spatial,
+                &transforms,
+                &options,
+            )
+        })
+        .map_err(crate::map_error)?;
+    python_lesions(py, lesions, None)
 }
 
 fn map_export(py: Python<'_>, saved: radiomics::MapExport) -> PyResult<Bound<'_, PyAny>> {

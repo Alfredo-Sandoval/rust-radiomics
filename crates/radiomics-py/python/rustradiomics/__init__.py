@@ -2,9 +2,17 @@
 
 from importlib.metadata import version
 
-from rustradiomics._results import MapExport, Result
+from rustradiomics._results import Lesion, MapExport, Result
 from rustradiomics._types import VoxelSink, VoxelSinkFactory
-from rustradiomics._workflows import export, export_files, extract, extract_files
+from rustradiomics._workflows import (
+    export,
+    export_files,
+    extract,
+    extract_files,
+    extract_lesions,
+    extract_lesions_files,
+    label_lesions,
+)
 from rustradiomics.config.settings import FEATURES, Settings, list_features
 from rustradiomics.config.spatial import IbsiInterpolation, ImageSettings, Interpolator
 from rustradiomics.config.transforms import ImageType, TransformSettings
@@ -18,6 +26,7 @@ __all__ = [
     "ImageSettings",
     "ImageType",
     "Interpolator",
+    "Lesion",
     "MapExport",
     "Result",
     "Settings",
@@ -29,6 +38,9 @@ __all__ = [
     "export_files",
     "extract",
     "extract_files",
+    "extract_lesions",
+    "extract_lesions_files",
+    "label_lesions",
     "list_features",
 ]
 

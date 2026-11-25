@@ -104,8 +104,8 @@ saved.maps["original_glcm_JointEntropy"]  # pathlib.Path to a float32 NIfTI
 saved.report                              # pathlib.Path to features.json
 ```
 
-The [Python guide](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md) covers settings, streaming voxel batches
-and errors.
+The [Python guide](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md) covers settings, per-lesion
+extraction, streaming voxel batches and errors.
 
 ## Features
 

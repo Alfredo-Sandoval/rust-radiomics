@@ -639,6 +639,19 @@ fn exact_bins(selected: &[f64], settings: &Settings) -> Result<Vec<i32>> {
 // Preparation
 // ---------------------------------------------------------------------------------------
 
+/// Reject an image and mask that are not one nonempty 2D or 3D grid of supported dtypes
+/// (`validate_pair`).
+pub fn validate_pair(image: &HostArray, mask: &HostArray) -> Result<()> {
+    let ndim = image.ndim();
+    if !(ndim == 2 || ndim == 3) || image.shape() != mask.shape() || image.shape().contains(&0) {
+        return invalid("image and mask must share a nonempty 2D or 3D array shape");
+    }
+    if image.kind() == ArrayKind::Bool || mask.kind() == ArrayKind::Float {
+        return invalid("image must be real numeric and mask must contain integer labels");
+    }
+    Ok(())
+}
+
 /// Validate inputs, then normalize and resegment, keeping the gathered samples
 /// (`prepare_sampled_input`).
 ///
@@ -658,14 +671,8 @@ pub fn prepare_sampled_input(
     settings: &Settings,
     voxel: bool,
 ) -> Result<(PreparedInput, Vec<f64>)> {
-    let ndim = image.ndim();
-    if !(ndim == 2 || ndim == 3) || image.shape() != mask.shape() || image.shape().contains(&0) {
-        return invalid("image and mask must share a nonempty 2D or 3D array shape");
-    }
-    if image.kind() == ArrayKind::Bool || mask.kind() == ArrayKind::Float {
-        return invalid("image must be real numeric and mask must contain integer labels");
-    }
-    settings.validate(ndim)?;
+    validate_pair(image, mask)?;
+    settings.validate(image.ndim())?;
     let values = normalize_values(image, settings)?;
     let roi = mask.eq_label(settings.label);
     if !roi.iter().any(|&r| r) {

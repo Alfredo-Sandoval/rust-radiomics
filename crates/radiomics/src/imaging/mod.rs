@@ -3,6 +3,7 @@
 //! Mirrors the `mlxradiomics/imaging` package.
 
 pub mod io;
+pub mod lesions;
 pub mod preprocessing;
 pub mod spatial;
 pub mod transforms;

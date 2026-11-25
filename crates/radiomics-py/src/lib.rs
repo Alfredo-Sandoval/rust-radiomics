@@ -79,6 +79,12 @@ fn _native(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(crate::parameters::parse_params, m)?)?;
     m.add_function(wrap_pyfunction!(crate::workflows::extract, m)?)?;
     m.add_function(wrap_pyfunction!(crate::workflows::extract_files, m)?)?;
+    m.add_function(wrap_pyfunction!(crate::workflows::label_lesions, m)?)?;
+    m.add_function(wrap_pyfunction!(crate::workflows::extract_lesions, m)?)?;
+    m.add_function(wrap_pyfunction!(
+        crate::workflows::extract_lesions_files,
+        m
+    )?)?;
     m.add_function(wrap_pyfunction!(crate::workflows::export, m)?)?;
     m.add_function(wrap_pyfunction!(crate::workflows::export_files, m)?)?;
     Ok(())

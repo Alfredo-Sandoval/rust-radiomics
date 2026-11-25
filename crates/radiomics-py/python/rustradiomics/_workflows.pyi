@@ -4,7 +4,7 @@ from typing import Literal, overload
 import numpy as np
 from numpy.typing import NDArray
 
-from rustradiomics._results import MapExport, Result
+from rustradiomics._results import Lesion, MapExport, Result
 from rustradiomics._types import FloatArray, HostArray, MapDtype, VoxelSink, VoxelSinkFactory
 from rustradiomics.config.settings import Settings
 from rustradiomics.config.spatial import ImageSettings
@@ -114,6 +114,33 @@ def extract_files(
     sink: VoxelSink | None = None,
     sink_factory: VoxelSinkFactory | None = None,
 ) -> Result: ...
+def label_lesions(
+    mask: HostArray,
+    *,
+    label: int = 1,
+    min_voxels: int = 1,
+    max_lesions: int | None = None,
+) -> NDArray[np.int32]: ...
+def extract_lesions(
+    image: HostArray,
+    mask: HostArray,
+    *,
+    settings: Settings | None = None,
+    transforms: TransformSettings | None = None,
+    spacing: tuple[float, ...] | None = None,
+    min_voxels: int = 1,
+    max_lesions: int | None = None,
+) -> tuple[Lesion, ...]: ...
+def extract_lesions_files(
+    image_path: str | os.PathLike[str],
+    mask_path: str | os.PathLike[str],
+    *,
+    settings: Settings | None = None,
+    image_settings: ImageSettings | None = None,
+    transforms: TransformSettings | None = None,
+    min_voxels: int = 1,
+    max_lesions: int | None = None,
+) -> tuple[Lesion, ...]: ...
 def export(
     image: HostArray,
     mask: HostArray,

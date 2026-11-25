@@ -7,8 +7,11 @@ from contextlib import ExitStack, contextmanager
 from pathlib import Path
 from typing import Literal
 
+import numpy as np
+from numpy.typing import NDArray
+
 from rustradiomics import _native
-from rustradiomics._results import MapExport, Result
+from rustradiomics._results import Lesion, MapExport, Result
 from rustradiomics._types import HostArray, MapDtype, VoxelSink, VoxelSinkFactory
 from rustradiomics.config.settings import Settings
 from rustradiomics.config.spatial import ImageSettings
@@ -101,6 +104,101 @@ def extract_files(
         sink_factory,
     )
     return Result(features, metadata)
+
+
+def _check_lesion_selection(min_voxels: int, max_lesions: int | None) -> None:
+    if type(min_voxels) is not int or min_voxels < 1:
+        raise InvalidInputError("min_voxels must be a positive integer")
+    if max_lesions is not None and (type(max_lesions) is not int or max_lesions < 1):
+        raise InvalidInputError("max_lesions must be a positive integer or None")
+
+
+def label_lesions(
+    mask: HostArray,
+    *,
+    label: int = 1,
+    min_voxels: int = 1,
+    max_lesions: int | None = None,
+) -> NDArray[np.int32]:
+    """Number the connected lesions of one mask label, largest first.
+
+    The result has the mask's shape: 0 outside the kept lesions, 1 for the largest
+    lesion, 2 for the next. Voxels that touch by a face, an edge or a corner belong to
+    one lesion. Equal-sized lesions keep the order of their first voxel in C order. Pass
+    the map as ``mask`` with ``Settings(label=k)`` to extract or export lesion ``k``.
+    ``min_voxels`` drops smaller lesions before ``max_lesions`` keeps the largest ones.
+    """
+    _check_lesion_selection(min_voxels, max_lesions)
+    return _native.label_lesions(mask, label, min_voxels, max_lesions)
+
+
+def extract_lesions(
+    image: HostArray,
+    mask: HostArray,
+    *,
+    settings: Settings | None = None,
+    transforms: TransformSettings | None = None,
+    spacing: tuple[float, ...] | None = None,
+    min_voxels: int = 1,
+    max_lesions: int | None = None,
+) -> tuple[Lesion, ...]:
+    """Extract ROI features for each connected lesion of ``settings.label``.
+
+    Every kept lesion is extracted as its own ROI, exactly as ``extract`` would with a
+    mask holding only that lesion. Lesions are returned largest first.
+    """
+    _check_lesion_selection(min_voxels, max_lesions)
+    if spacing is None:
+        warnings.warn(
+            "Array extraction assumes 1 mm spacing on every axis. Pass spacing explicitly "
+            "in NumPy axis order, or use extract_lesions_files to read physical geometry.",
+            UserWarning,
+            stacklevel=2,
+        )
+    lesions = _native.extract_lesions(
+        image,
+        mask,
+        settings if settings is not None else Settings(),
+        transforms if transforms is not None else TransformSettings(),
+        spacing,
+        min_voxels,
+        max_lesions,
+    )
+    return tuple(
+        Lesion(index, voxels, tuple(lower), tuple(upper), Result(features, metadata))
+        for index, voxels, lower, upper, features, metadata in lesions
+    )
+
+
+def extract_lesions_files(
+    image_path: str | os.PathLike[str],
+    mask_path: str | os.PathLike[str],
+    *,
+    settings: Settings | None = None,
+    image_settings: ImageSettings | None = None,
+    transforms: TransformSettings | None = None,
+    min_voxels: int = 1,
+    max_lesions: int | None = None,
+) -> tuple[Lesion, ...]:
+    """Extract ROI features for each connected lesion of a NIfTI or NRRD mask label.
+
+    The pair is loaded and spatially processed once, and the label is split on the
+    processed grid described by ``metadata["image_geometry"]``.
+    """
+    _check_lesion_selection(min_voxels, max_lesions)
+    lesions = _native.extract_lesions_files(
+        Path(image_path).expanduser(),
+        Path(mask_path).expanduser(),
+        settings if settings is not None else Settings(),
+        image_settings if image_settings is not None else ImageSettings(),
+        transforms if transforms is not None else TransformSettings(),
+        min_voxels,
+        max_lesions,
+    )
+    return tuple(
+        Lesion(index, voxels, tuple(lower), tuple(upper), Result(features, metadata))
+        for index, voxels, lower, upper, features, metadata in lesions
+    )
 
 
 def _check_export_options(overwrite: bool, max_scratch_mib: int | None) -> None:

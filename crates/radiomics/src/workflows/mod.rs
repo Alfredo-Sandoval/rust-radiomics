@@ -6,6 +6,7 @@ pub mod derived;
 pub mod engine;
 pub mod exporting;
 pub mod extraction;
+pub mod lesions;
 pub mod publication;
 pub mod reporting;
 pub mod roi;

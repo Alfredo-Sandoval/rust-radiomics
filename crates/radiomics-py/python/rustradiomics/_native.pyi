@@ -1,6 +1,9 @@
 from collections.abc import Mapping, Sequence
 from os import PathLike
 
+import numpy as np
+from numpy.typing import NDArray
+
 from rustradiomics._types import (
     ExecutionMetadata,
     HostArray,
@@ -44,6 +47,31 @@ def extract_files(
     sink: VoxelSink | None = None,
     sink_factory: VoxelSinkFactory | None = None,
 ) -> tuple[dict[str, float | VoxelArray], ExecutionMetadata]: ...
+def label_lesions(
+    mask: HostArray, label: int, min_voxels: int, max_lesions: int | None
+) -> NDArray[np.int32]: ...
+def extract_lesions(
+    image: HostArray,
+    mask: HostArray,
+    settings: Settings,
+    transforms: TransformSettings,
+    spacing: Sequence[float] | None,
+    min_voxels: int,
+    max_lesions: int | None,
+) -> list[
+    tuple[int, int, list[int], list[int], dict[str, float], ExecutionMetadata]
+]: ...
+def extract_lesions_files(
+    image_path: str | PathLike[str],
+    mask_path: str | PathLike[str],
+    settings: Settings,
+    image_settings: ImageSettings,
+    transforms: TransformSettings,
+    min_voxels: int,
+    max_lesions: int | None,
+) -> list[
+    tuple[int, int, list[int], list[int], dict[str, float], ExecutionMetadata]
+]: ...
 def export(
     image: HostArray,
     mask: HostArray,

@@ -183,9 +183,11 @@ pub use crate::contracts::results::{ExtractionResult, MapExport};
 pub use crate::contracts::types::{MapDtype, VoxelSink};
 pub use crate::error::{Error, Result};
 pub use crate::imaging::io::HostArray;
+pub use crate::imaging::lesions::{LesionOptions, label_lesions};
 pub use crate::workflows::engine::{FeatureValue, Output, SinkFactory};
 pub use crate::workflows::exporting::{ExportFilesOptions, ExportOptions, export, export_files};
 pub use crate::workflows::extraction::{extract, extract_files};
+pub use crate::workflows::lesions::{Lesion, extract_lesions, extract_lesions_files};
 
 pub(crate) use crate::contracts::types::{Features, Prepared, PreparedInput};
 

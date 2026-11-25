@@ -1,5 +1,12 @@
 # Release notes
 
+## Unreleased
+
+**Connected lesions.** `extract_lesions` and `extract_lesions_files` split a mask label into
+its connected lesions and return ROI features for each one, largest first. `min_voxels` and
+`max_lesions` select the lesions to keep, and `label_lesions` returns the lesion map. The
+Rust crate has the same functions with `LesionOptions`.
+
 ## 1.1.0
 
 **New package name.** The Python package is now `rustradiomics`, imported with

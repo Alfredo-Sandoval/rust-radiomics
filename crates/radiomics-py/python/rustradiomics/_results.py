@@ -31,6 +31,22 @@ class Result(Generic[_Value_co]):
 
 
 @dataclass(frozen=True)
+class Lesion:
+    """One connected lesion of a mask label and its ROI features.
+
+    ``index`` is 1 for the largest lesion of the label. ``voxels`` counts the lesion's
+    mask voxels. ``lower`` and ``upper`` bound them as array indexes per axis, ``upper``
+    exclusive, on the grid the features were computed on.
+    """
+
+    index: int
+    voxels: int
+    lower: tuple[int, ...]
+    upper: tuple[int, ...]
+    result: Result[float]
+
+
+@dataclass(frozen=True)
 class MapExport:
     """Published voxel maps, the JSON report and their execution metadata.
 

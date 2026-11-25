@@ -34,8 +34,8 @@ tolerances against mlx-radiomics.
 
 This port mirrors mlx-radiomics v1.1.0: feature names and order, `Settings` fields and
 defaults, parameter-file keys, derived-image names, report schema 2 and error classes. It
-also has the `momentinvariant` family that mlx-radiomics added after 1.1.0. These
-differences are deliberate.
+also has the `momentinvariant` family and the per-lesion extraction functions that
+mlx-radiomics added after 1.1.0. These differences are deliberate.
 
 - **Precision.** mlx-radiomics computes features in float32 on Metal. This port computes in
   float64 on the CPU and returns first-order statistics and the intensity peaks as float32. Values agree with mlx-radiomics within `rtol=2e-5` and `atol=2e-6` for

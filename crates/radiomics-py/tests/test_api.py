@@ -55,6 +55,7 @@ def test_public_namespace() -> None:
         "ImageSettings",
         "ImageType",
         "Interpolator",
+        "Lesion",
         "MapExport",
         "Result",
         "Settings",
@@ -66,6 +67,9 @@ def test_public_namespace() -> None:
         "export_files",
         "extract",
         "extract_files",
+        "extract_lesions",
+        "extract_lesions_files",
+        "label_lesions",
         "list_features",
     ]
     assert dir(r) == sorted(r.__all__)
@@ -824,3 +828,49 @@ def test_spatial_numeric_protocol_and_invalid_settings_dimension() -> None:
         InvalidInputError, match="slice_axis must be an integer indexing an image axis"
     ):
         r.Settings().validate(-1)
+
+
+def test_lesions_are_extracted_one_roi_each_from_arrays_and_files(tmp_path: Path) -> None:
+    image = (np.arange(4 * 6 * 8) * 7 % 23).astype(np.int16).reshape(4, 6, 8)
+    mask = np.zeros(image.shape, dtype=np.int16)
+    mask[:, :, :3] = 1
+    mask[1:3, 1:4, 5:] = 1
+    expected_map = np.zeros(image.shape, dtype=np.int32)
+    expected_map[:, :, :3] = 1
+    expected_map[1:3, 1:4, 5:] = 2
+    numbered = r.label_lesions(mask)
+    assert numbered.dtype == np.int32
+    np.testing.assert_array_equal(numbered, expected_map)
+
+    header = (
+        "NRRD0005\ntype: short\ndimension: 3\nsizes: 8 6 4\nspace dimension: 3\n"
+        "space directions: (1,0,0) (0,1,0) (0,0,2)\nspace origin: (0,0,0)\n"
+        "encoding: raw\nendian: little\n\n"
+    ).encode("ascii")
+    paths = {name: tmp_path / f"{name}.nrrd" for name in ("image", "mask", "numbered")}
+    for name, array in (("image", image), ("mask", mask), ("numbered", numbered)):
+        paths[name].write_bytes(header + array.astype("<i2").tobytes())
+    settings = r.Settings(features=("firstorder_Mean", "shape_VoxelVolume"))
+    spacing = (2.0, 1.0, 1.0)
+
+    lesions = r.extract_lesions(image, mask, spacing=spacing, settings=settings)
+    from_files = r.extract_lesions_files(paths["image"], paths["mask"], settings=settings)
+    located = [(1, 72, (0, 0, 0), (4, 6, 3)), (2, 18, (1, 1, 5), (3, 4, 8))]
+    for found in (lesions, from_files):
+        assert [(x.index, x.voxels, x.lower, x.upper) for x in found] == located
+        assert all(x.result.metadata["settings"]["label"] == 1 for x in found)
+    for lesion, from_file in zip(lesions, from_files, strict=True):
+        alone = (numbered == lesion.index).astype(np.uint8)
+        expected = r.extract(image, alone, spacing=spacing, settings=settings)
+        assert lesion.result.features == expected.features
+        expected_file = r.extract_files(
+            paths["image"], paths["numbered"], settings=replace(settings, label=lesion.index)
+        )
+        assert from_file.result.features == expected_file.features == expected.features
+        assert from_file.result.metadata.get("image_geometry") == expected_file.metadata.get(
+            "image_geometry"
+        )
+    largest = r.extract_lesions(image, mask, spacing=spacing, settings=settings, min_voxels=19)
+    assert [x.voxels for x in largest] == [72]
+    with pytest.raises(InvalidInputError, match="min_voxels"):
+        r.extract_lesions(image, mask, spacing=spacing, settings=settings, min_voxels=0)

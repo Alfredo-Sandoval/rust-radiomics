@@ -12,9 +12,10 @@ use radiomics::params::{
 use radiomics::settings::*;
 use radiomics::{
     Error, ExportFilesOptions, ExportOptions, ExtractionResult, Family, FeatureSpec, FeatureValue,
-    IbsiInterpolation, ImageSettings, ImageType, Interpolator, MapDtype, MapExport, Mode, Output,
-    Result, Settings, SinkFactory, TransformSettings, VoxelSink, default_features, export,
-    export_files, extract, extract_files, features, list_features,
+    IbsiInterpolation, ImageSettings, ImageType, Interpolator, Lesion, LesionOptions, MapDtype,
+    MapExport, Mode, Output, Result, Settings, SinkFactory, TransformSettings, VoxelSink,
+    default_features, export, export_files, extract, extract_files, extract_lesions,
+    extract_lesions_files, features, label_lesions, list_features,
 };
 
 fn send_sync<T: Send + Sync + 'static>() {}

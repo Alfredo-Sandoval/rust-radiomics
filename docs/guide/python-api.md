@@ -1,13 +1,15 @@
 # Python API
 
 Use `extract` or `extract_files` to compute ROI features or voxel maps. Use `export` or
-`export_files` to write voxel maps to disk.
+`export_files` to write voxel maps to disk. Use `extract_lesions` or `extract_lesions_files`
+to compute ROI features for each connected lesion of a mask label.
 
 | Operation | Arrays | NIfTI/NRRD files | Result |
 | --- | --- | --- | --- |
 | ROI features | `extract(image, mask)` | `extract_files(image_path, mask_path)` | `Result[float]` |
 | Voxel maps in memory | `extract(image, mask, mode="voxel")` | `extract_files(image_path, mask_path, mode="voxel")` | `Result[NDArray[np.float64]]` |
 | Voxel maps on disk | `export(image, mask, output_dir)` | `export_files(image_path, mask_path, output_dir)` | `MapExport(report, maps, metadata)` |
+| ROI features per connected lesion | `extract_lesions(image, mask)` | `extract_lesions_files(image_path, mask_path)` | `tuple[Lesion, ...]` |
 
 All options are keyword-only.
 
@@ -35,6 +37,12 @@ def export(image, mask, output_dir, *, settings=None, transforms=None, spacing=N
 def export_files(image_path, mask_path, output_dir, *, settings=None,
                  image_settings=None, transforms=None, overwrite=False,
                  scratch_dir=None, max_scratch_mib=None) -> MapExport
+def extract_lesions(image, mask, *, settings=None, transforms=None, spacing=None,
+                    min_voxels=1, max_lesions=None) -> tuple[Lesion, ...]
+def extract_lesions_files(image_path, mask_path, *, settings=None, image_settings=None,
+                          transforms=None, min_voxels=1,
+                          max_lesions=None) -> tuple[Lesion, ...]
+def label_lesions(mask, *, label=1, min_voxels=1, max_lesions=None) -> NDArray[np.int32]
 def list_features(*families, mode="roi", ndim=None) -> tuple[str, ...]
 ```
 
@@ -121,6 +129,32 @@ result = export_files(
 ```
 
 [Parameters](parameters.md#image-types) lists all 16 image types and their options.
+
+## Connected lesions
+
+A mask label can hold several separate lesions. `extract_lesions` and
+`extract_lesions_files` split the label into connected lesions and extract each one as
+its own ROI:
+
+```python
+from rustradiomics import extract_lesions_files
+
+lesions = extract_lesions_files(
+    "image.nii.gz", "mask.nii.gz", settings=settings, min_voxels=10, max_lesions=5,
+)
+for lesion in lesions:
+    lesion.index, lesion.voxels  # 1 is the largest lesion; size in voxels
+    lesion.lower, lesion.upper   # array index bounds per axis, upper exclusive
+    lesion.result.features["original_firstorder_Mean"]
+```
+
+Voxels that touch by a face, an edge or a corner belong to one lesion, as in PySERA.
+Lesions are ordered by voxel count, largest first. `min_voxels` drops smaller lesions,
+then `max_lesions` keeps the largest ones. Each `lesion.result` is the `Result` that
+`extract` returns for a mask holding only that lesion. The file function splits the label
+on the processed grid, after any resampling. Both functions return ROI features. For
+voxel maps of one lesion, number the lesions with `label_lesions(mask)` and pass that map
+as the mask with `Settings(label=k)`.
 
 ## Streaming voxel batches
 

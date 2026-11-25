@@ -26,6 +26,7 @@ release.
 | Path | Contents |
 | --- | --- |
 | `radiomics::{extract, extract_files}` | Features or maps from arrays or from a NIfTI or NRRD pair |
+| `radiomics::{extract_lesions, extract_lesions_files, label_lesions, Lesion, LesionOptions}` | ROI features for each connected lesion of a mask label |
 | `radiomics::{export, export_files}` | Voxel maps written as NIfTI files with a `features.json` report |
 | `radiomics::{Output, VoxelSink, SinkFactory, MapDtype}` | Delivery mode and streaming consumers |
 | `radiomics::{ExtractionResult, FeatureValue, MapExport}` | Results |
@@ -49,6 +50,9 @@ them with `..Default::default()`. They are validated when they are used.
 | --- | --- |
 | `extract(image, mask, settings, transforms, spacing, output)` | Features or maps from aligned arrays |
 | `extract_files(image_path, mask_path, settings, image_settings, transforms, output)` | Features or maps from a NIfTI or NRRD pair |
+| `extract_lesions(image, mask, settings, transforms, spacing, &LesionOptions)` | ROI features for each connected lesion of `settings.label` |
+| `extract_lesions_files(image_path, mask_path, settings, image_settings, transforms, &LesionOptions)` | The same from a NIfTI or NRRD pair, split on the processed grid |
+| `label_lesions(mask, label, &LesionOptions)` | Lesion map of one label, 1 for the largest lesion |
 | `export(image, mask, output_dir, &ExportOptions)` | Write voxel maps and a schema-2 report from arrays |
 | `export_files(image_path, mask_path, output_dir, &ExportFilesOptions)` | Write voxel maps and a report from files |
 | `list_features(families, mode, ndim)`, `features()`, `default_features()` | Inspect the catalog |
@@ -57,6 +61,11 @@ them with `..Default::default()`. They are validated when they are used.
 `ExtractionResult` has `features`, an ordered map keyed `<image>_<family>_<name>`, and
 `metadata`. A `FeatureValue` is `Scalar(f64)`, `Map32(ArrayD<f32>)` or `Map64(ArrayD<f64>)`.
 `export` and `export_files` return a `MapExport` with `report`, `maps` and `metadata`.
+`extract_lesions` and `extract_lesions_files` return a `Vec<Lesion>`, largest lesion first.
+A `Lesion` has `index`, `voxels`, the index bounds `lower` and `upper`, and the `result` of
+extracting that lesion alone. Voxels that touch by a face, an edge or a corner belong to
+one lesion. `LesionOptions` drops lesions below `min_voxels`, then keeps the `max_lesions`
+largest.
 `radiomics::Error` has the variants `InvalidInput`, `Execution`, `Memory`,
 `MissingDependency`, `Io` and `NotImplemented`. It implements `std::error::Error`, `Send`
 and `Sync`.
