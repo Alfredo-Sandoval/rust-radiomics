@@ -1,123 +1,167 @@
 <div align="center">
 
-# rustradiomics
+# rust radiomics
 
-Radiomics feature extraction in Rust, with a Python API. Computes PyRadiomics and IBSI
-features of a segmented region, or a map of each feature over the image. The standard
-PyRadiomics features run 50 to 140 times faster than in PyRadiomics.
+Extract radiomics features and voxel maps on the CPU with native Rust,
+50 to 140 times faster than PyRadiomics.
 
 [![Python 3.13 to 3.15](https://img.shields.io/badge/Python-3.13%E2%80%933.15-3776AB?logo=python&logoColor=white)](#install)
 [![Rust 1.89 or later](https://img.shields.io/badge/Rust-1.89%2B-black?logo=rust)](#rust)
-[![License Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue)](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/LICENSE)
-[![Apple Silicon wheel](https://img.shields.io/badge/Apple_Silicon-CPU-black?logo=apple)](#install)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue)](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/LICENSE)
+[![Apple Silicon](https://img.shields.io/badge/Apple_Silicon-CPU-black?logo=apple)](#install)
 
-[Getting started](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/getting-started.md) · [Python API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md) · [Rust API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/rust-api.md) · [Feature catalog](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/features.md) · [Parameters](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/parameters.md)
+[Getting started](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/getting-started.md) · [Python API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md) · [Rust API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/rust-api.md) · [Feature catalog](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/features.md) · [Performance](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/performance.md)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/phantom-dark.svg">
-  <img src="docs/assets/phantom-light.svg" alt="The four slices of the IBSI digital phantom drawn as cubes labeled with their intensities, with blue cubes outside the mask, above the GLCM joint entropy map computed from them." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/phantom-dark.svg">
+  <img src="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/phantom-light.svg" alt="The four slices of the IBSI digital phantom drawn as cubes labeled with their intensities, above the GLCM joint entropy map computed from them." width="100%">
 </picture>
 
-<sub>The <a href="https://ibsi.readthedocs.io/en/latest/05_Reference_data_sets.html#digital-phantom">IBSI digital phantom</a> by Alex Zwanenburg (CC BY 4.0) and its GLCM joint entropy map. Each cube is one voxel, and the mask covers the 74 gray voxels.</sub>
+<sub>The <a href="https://ibsi.readthedocs.io/en/latest/05_Reference_data_sets.html#digital-phantom">IBSI digital phantom</a> by Alex Zwanenburg (CC BY 4.0) and its GLCM joint entropy map.</sub>
 
 </div>
 
 | Input | Output |
 | :--- | :--- |
-| Aligned image + integer label mask · NumPy arrays, NIfTI or NRRD | ROI features, or one voxel map per feature in memory or as float32 NIfTI |
+| Aligned image + integer label mask | ROI features, or one voxel map per feature in memory or as float32 NIfTI |
 
-rustradiomics uses PyRadiomics feature names, reads PyRadiomics parameter files and
-follows IBSI definitions by default. It computes in float64 on the CPU.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/speed-dark.svg">
+  <img src="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/speed-light.svg" alt="Bar chart of warm call time for 93 PyRadiomics features on the LUNG1-001 lung CT tumor: PyRadiomics 742 ms, rustradiomics 14.5 ms on one CPU thread (51 times faster) and 5.37 ms on 18 CPU threads (138 times faster)." width="100%">
+</picture>
+
+PyRadiomics feature names and parameter files, with configurable IBSI conventions. With
+PyRadiomics conventions selected, the 93 values agree with PyRadiomics within a relative
+1e-6. All IBSI 1 digital phantom values and IBSI 2 consensus values pass
+([validation](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/technical.md#validation)). The only dependency is NumPy.
+
+On an Apple silicon Mac, see also [mlx-radiomics](https://github.com/MedMLX/mlx-radiomics),
+which runs on the GPU and is listed among the
+[IBSI implementations](https://theibsi.github.io/implementations).
 
 ## Install
 
-```bash
-uv venv --python 3.13
-source .venv/bin/activate
-RELEASE=https://github.com/Alfredo-Sandoval/rust-radiomics/releases/download/v1.1.0
-uv pip install "$RELEASE/rustradiomics-1.1.0-cp313-cp313-macosx_11_0_arm64.whl"
+```sh
+pip install rustradiomics
 ```
 
-The [1.1.0 release](https://github.com/Alfredo-Sandoval/rust-radiomics/releases/tag/v1.1.0)
-has wheels for Apple silicon Macs with Python 3.13, 3.14 and 3.15. For another Python
-version, change `3.13` and both `cp313` tags, such as to `3.14` and `cp314`. To build from
-a checkout with Rust 1.96.0 installed, run
-`RUSTUP_TOOLCHAIN=1.96.0 uv pip install ./crates/radiomics-py` from the repository root.
-Before 1.1.0 the package was named `rustrad`.
+Needs Python 3.13, 3.14 or 3.15. PyPI has wheels for Apple silicon Macs. On other
+systems pip builds from source, which needs a Rust toolchain.
 
-## Run
+## Python API
+
+Start with image and mask files to preserve their physical geometry. Arrays use the
+same settings and result contract:
 
 ```python
 from rustradiomics import Settings, extract_files
 
-phantom = "crates/radiomics/tests/data/w12/digital_phantom_"
-result = extract_files(
-    phantom + "image.nii.gz", phantom + "mask.nii.gz",
-    settings=Settings(label=1, features=("firstorder_Mean", "shape_VoxelVolume")),
+settings = Settings(
+    label=1, bin_width=25,
+    features=("firstorder_Mean", "glcm_Contrast"),
 )
-print(result.features)
+result = extract_files(
+    "image.nii.gz", "mask.nii.gz", settings=settings,
+)
+mean = result.features["original_firstorder_Mean"]
 ```
 
-```text
-{'original_firstorder_Mean': 2.148648738861084, 'original_shape_VoxelVolume': 592.0}
+Add `mode="voxel"` for maps in memory. Use `export_files` to write voxel maps
+without retaining every map in memory. `export` and `export_files` always write
+voxel maps. For ROI values, use `result.features`.
+
+**Conventions:** defaults follow IBSI, even when using PyRadiomics feature names
+or parameter files. Select alternative definitions through individual `Settings`
+fields.
+
+### Arrays and maps
+
+```python
+from rustradiomics import extract, extract_files, export_files
+
+roi = extract(image, mask, spacing=(3.0, 1.0, 1.0), settings=settings)
+roi.features["original_firstorder_Mean"]    # float
+
+voxel = extract_files(
+    "image.nii.gz", "mask.nii.gz", settings=settings, mode="voxel",
+)
+voxel.features["original_firstorder_Mean"]  # float64 NumPy array
+
+saved = export_files(
+    "image.nii.gz", "mask.nii.gz", "outputs/maps", settings=settings,
+)
+saved.report                            # path to features.json
+saved.maps["original_firstorder_Mean"]  # path to a float32 NIfTI
+saved.metadata["settings"]              # effective settings
 ```
 
-The image and mask are the phantom above, included in this repository. Run the example
-from the repository root, or pass your own NIfTI or NRRD image and mask.
-
-| Operation | Arrays | NIfTI/NRRD files | Returns |
-| :--- | :--- | :--- | :--- |
-| ROI features | `extract` | `extract_files` | `Result` of floats |
-| Voxel maps in memory | `extract(..., mode="voxel")` | `extract_files(..., mode="voxel")` | `Result` of NumPy arrays |
-| Voxel maps on disk | `export` | `export_files` | `MapExport` with the map paths |
+| Operation | Arrays | NIfTI/NRRD files | Result |
+| --- | --- | --- | --- |
+| ROI features | `extract(image, mask)` | `extract_files(image_path, mask_path)` | `Result[float]` |
+| Voxel maps in memory | `extract(image, mask, mode="voxel")` | `extract_files(image_path, mask_path, mode="voxel")` | `Result[NDArray[np.float64]]` |
+| Voxel maps on disk | `export(image, mask, output_dir)` | `export_files(image_path, mask_path, output_dir)` | `MapExport(report, maps, metadata)` |
 
 Options are keyword-only:
 
 | Option | Sets |
 | :--- | :--- |
-| `settings=` | Label, features, binning and conventions (`Settings`) |
-| `transforms=` | Derived images such as wavelet or LoG (`TransformSettings`) |
-| `image_settings=` | Resampling and mask correction for file inputs (`ImageSettings`) |
-| `spacing=` | Array voxel sizes in millimeters, in NumPy axis order |
-| `map_dtype=` | `"float64"` (default) or `"float32"` for maps kept in memory |
+| `settings=` | Features and binning |
+| `transforms=` | Derived images |
+| `image_settings=` | Resampling and mask correction for file inputs |
+| `spacing=` | Array voxel sizes in NumPy axis order |
 
-- **Label:** `Settings(label=...)` selects one structure in a multi-label mask. The default is 1.
-- **Geometry:** file operations read spacing from the image. Array extraction assumes 1 mm
-  on each axis and warns when `spacing` is omitted.
-- **Maps:** map values have float32 precision. Exports and streamed batches are float32.
-  Read saved maps with NiBabel, because SimpleITK reads NaN voxels as zero.
-- **Undefined values:** NaN. Overflow gives infinity.
-- **Errors:** unsupported options and invalid inputs raise `InvalidInputError`.
-- **Threads:** set `RAYON_NUM_THREADS` to limit the CPU threads used.
+- **Geometry:** file operations read geometry from the image. Array extraction warns
+  when `spacing` is omitted and assumes 1 mm on each axis. Array `export` writes zero
+  origin and identity direction; use file operations for scanner-aligned output, or
+  explicitly acknowledge synthetic coordinates with `allow_synthetic_geometry=True`.
+- **Precision:** feature arithmetic is float64. First-order statistics and the
+  intensity peaks are returned as float32 values. In-memory float64 maps hold float32
+  samples; pass `map_dtype="float32"` to `extract` or `extract_files` to halve
+  retained map storage. Saved maps and streamed batches are float32.
 
-### Voxel maps
+Extraction results expose `.features` and `.metadata`; exports expose `.report`,
+`.maps` and `.metadata`. The [Python guide](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md)
+covers settings, streaming voxel batches and errors.
 
-This call writes the joint entropy map shown above as a NIfTI file.
+## Parameter files
 
-```python
-from rustradiomics import Settings, export_files
+The supported PyRadiomics sections are `setting`, `imageType` and `featureClass`.
+Unsupported keys, image types and per-image overrides raise `InvalidInputError`.
 
-phantom = "crates/radiomics/tests/data/w12/digital_phantom_"
-saved = export_files(
-    phantom + "image.nii.gz", phantom + "mask.nii.gz", "outputs/phantom",
-    settings=Settings(label=1, features=("glcm_JointEntropy",), bin_width=1, kernel_radius=1),
-)
-saved.maps["original_glcm_JointEntropy"]  # pathlib.Path to a float32 NIfTI
-saved.report                              # pathlib.Path to features.json
+```yaml
+setting:
+  binWidth: 25
+  label: 1
+  resampledPixelSpacing: [1.0, 1.0, 1.0]
+  interpolator: sitkLinear
+  padDistance: 1
+imageType:
+  Original: {}
+  Wavelet:
+    level: 1
+featureClass:
+  firstorder: [Mean, Entropy]
+  glcm: [Contrast, JointEntropy]
 ```
 
-The [Python guide](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md) covers settings, streaming voxel batches
-and errors.
+| `imageType` keys | Status |
+| :--- | :--- |
+| `Original`, `Square`, `SquareRoot`, `Logarithm`, `Exponential`, `Gradient`, `Wavelet`, `LoG`, `LBP2D`, `LBP3D`, `Mean`, `Laws`, `Gabor`, `SeparableWavelet`, `Simoncelli` (alias `NonseparableWavelet`), `Riesz` | Supported |
+
+See [parameter files](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/parameters.md) for loading a file and filter options, and
+[conventions](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/parameters.md#conventions) for definition settings.
 
 ## Features
 
-`rustradiomics.FEATURES` lists 200 names, including all 116 non-deprecated PyRadiomics
-features. Without a `features` selection, extraction returns the 93 PyRadiomics intensity
-and texture features. Request shape and the other families by name, or select whole
-families with `list_features("firstorder", "glcm")`.
+Use `list_features("firstorder", "glcm")` to select whole families, or
+`list_features(mode="voxel", ndim=3)` to discover names supported in that mode.
+Pass its result as `Settings(features=...)`. Selecting a family does not change
+binning or numerical conventions.
 
-The `intensityhistogram`, `gldzm`, `ivh` and `localintensity` families come from IBSI and
-are not in PyRadiomics. The `momentinvariant` features follow the PySERA definitions.
+`rustradiomics.FEATURES` lists all 200 names, including all 116 non-deprecated
+PyRadiomics features. Without a `features` selection, extraction returns the 93
+PyRadiomics intensity and texture features; request shape and the other families
+by name.
 
 | Family | Count | Modes |
 | --- | ---: | --- |
@@ -135,120 +179,39 @@ are not in PyRadiomics. The `momentinvariant` features follow the PySERA definit
 | `momentinvariant` | 10 | 3D ROI |
 | `shape2D` | 9 | 2D ROI, or one slice of a 3D ROI |
 
-The [feature catalog](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/features.md) gives the units and IBSI identifier of
-each feature.
-
-## Parameter files
-
-`load_params` reads the `setting`, `imageType` and `featureClass` sections of a PyRadiomics
-parameter file. Unsupported keys raise `InvalidInputError`.
-
-```yaml
-setting:
-  binWidth: 1
-  label: 1
-imageType:
-  Original: {}
-  Wavelet:
-    level: 1
-featureClass:
-  firstorder: [Mean, Entropy]
-  glcm: [Contrast, JointEntropy]
-```
-
-```python
-from rustradiomics import extract_files
-from rustradiomics.config.parameters import load_params, parse_params
-
-phantom = "crates/radiomics/tests/data/w12/digital_phantom_"
-params = parse_params(load_params("params.yaml"), ndim=3)
-result = extract_files(
-    phantom + "image.nii.gz", phantom + "mask.nii.gz",
-    settings=params.settings,
-    image_settings=params.image_settings,
-    transforms=params.transforms,
-)
-result.features["wavelet-LLH_glcm_Contrast"]
-```
-
-`imageType` accepts `Original`, `Square`, `SquareRoot`, `Logarithm`, `Exponential`,
-`Gradient`, `Wavelet`, `LoG`, `LBP2D`, `LBP3D`, `Mean`, `Laws`, `Gabor`, `SeparableWavelet`,
-`Simoncelli` and `Riesz`. See [parameters](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/parameters.md) for filter options and convention settings.
+Calculation conventions such as kurtosis, shape covariance divisor, NGTDM
+singular cases and fixed-bin-size origin are independent `Settings` fields with
+IBSI defaults. Select each alternative explicitly; see
+[Conventions](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/parameters.md#conventions).
+The [feature catalog](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/features.md#catalog) lists public names and
+their IBSI identifiers.
 
 ## Rust
 
+The `radiomics` crate is the engine behind the Python package and has the same four
+operations.
+
 ```toml
 [dependencies]
-radiomics = { git = "https://github.com/Alfredo-Sandoval/rust-radiomics", tag = "v1.1.0" }
+radiomics = { git = "https://github.com/Alfredo-Sandoval/rust-radiomics" }
 ```
 
-```rust
-use std::path::Path;
-use radiomics::{FeatureValue, Output, Settings, extract_files};
+See the [Rust API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/rust-api.md).
 
-fn main() -> radiomics::Result<()> {
-    let phantom = Path::new("crates/radiomics/tests/data/w12");
-    let settings = Settings {
-        features: vec!["firstorder_Mean".into()],
-        ..Settings::default()
-    };
-    let result = extract_files(
-        &phantom.join("digital_phantom_image.nii.gz"),
-        &phantom.join("digital_phantom_mask.nii.gz"),
-        &settings,
-        &Default::default(),
-        &Default::default(),
-        Output::Roi,
-    )?;
-    if let FeatureValue::Scalar(mean) = &result.features["original_firstorder_Mean"] {
-        println!("Mean intensity: {mean:.2}");
-    }
-    Ok(())
-}
-```
+## Limits
 
-The crate also takes `ndarray` arrays, streams voxel maps in batches and writes them to
-disk. See the [Rust API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/rust-api.md).
+- Shape, local intensity and moment invariants are ROI-only; local intensity and moment
+  invariants need 3D input.
+- Undefined values are NaN; overflow is infinity.
+- Read voxel maps with NiBabel; SimpleITK reads stored NaN voxels as zero.
+- Detached inputs such as `.nhdr` require a new output directory, even with
+  `overwrite=True`.
+- The MedMLX runner and the `viz` module of mlx-radiomics are not ported.
 
-## Performance
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/speed-dark.svg">
-  <img src="docs/assets/speed-light.svg" alt="Bar chart of warm call time for 93 PyRadiomics features on the LUNG1-001 lung CT tumor: PyRadiomics 742 ms, rustradiomics 14.5 ms on one CPU thread (51 times faster) and 5.37 ms on 18 CPU threads (138 times faster)." width="100%">
-</picture>
-
-rustradiomics and PyRadiomics computed the same 93 intensity and texture features from the
-same arrays of the NSCLC-Radiomics LUNG1-001 CT (512 × 512 × 134 voxels, tumor mask of
-54,639 voxels), with rustradiomics set to PyRadiomics conventions. All 93 values agreed
-within a relative tolerance of 1e-6. Times are medians of six fresh processes on an Apple
-M5 Max, with file reading excluded. A warm call is one made after the first call in the
-process. rustradiomics was measured with the 1.0.0 wheel, published as `rustrad`.
-
-| Implementation | Warm call | First call | Warm speedup |
-| :--- | ---: | ---: | ---: |
-| PyRadiomics 3.1.1.dev111 | 742 ms | 796 ms | 1× |
-| rustradiomics, 1 thread | 14.5 ms | 32.2 ms | 51× |
-| rustradiomics, 18 threads | 5.37 ms | 23.9 ms | 138× |
-
-PyRadiomics added 306 MB to the peak process footprint, and rustradiomics added 12 MB with
-one thread and 30 MB with 18. The [performance notes](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/performance.md)
-give the method and commands, a comparison with mlx-radiomics on Metal and the voxel map
-timings. `python3 docs/assets/speed.py` redraws the figure from
-[`benchmarks/results/pyradiomics.json`](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/benchmarks/results/pyradiomics.json).
-
-## Validation
-
-| Reference | Result |
-| :--- | :--- |
-| IBSI 1 digital phantom | All 482 results with published reference values pass |
-| IBSI 1 CT phantom, configurations A–E | 1,321 of 1,322 results within the published tolerance; the other matches at three significant digits |
-| IBSI 2 filter responses | All 33 maps within 1% of the reference map's intensity range |
-| IBSI 2 CT features | All 323 consensus values within their published tolerances |
-| 1 and 18 threads on one CT scan | Identical ROI features and voxel maps |
-
-See the [technical notes](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/technical.md) for methods, and
-[limits](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/limits.md) for input requirements.
+See [limits](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/limits.md)
+for filter requirements, supported inputs and the differences from mlx-radiomics.
 
 ## License
 
-[Apache-2.0](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/LICENSE). See [third-party notices](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/THIRD_PARTY_NOTICES.md), including CC BY 4.0 attribution for the IBSI definitions.
+[Apache-2.0](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/LICENSE). See [third-party notices](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/THIRD_PARTY_NOTICES.md), including CC BY 4.0 attribution
+for the IBSI definitions.

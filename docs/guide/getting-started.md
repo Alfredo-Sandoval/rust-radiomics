@@ -1,58 +1,47 @@
 # Getting started
 
-## Requirements
-
-- Python 3.13, 3.14 or 3.15, and NumPy 2.1 or later.
-- For source builds, a Rust toolchain. The repository is tested with Rust 1.96.0.
-- For development from a checkout, `uv` installs the build tools, including `maturin`.
-
-The package runs on the CPU in float64 and uses all available cores through Rayon.
-
 ## Install
 
-The release wheels are for Apple silicon Macs. Download the wheel for your Python version
-from the [release page](https://github.com/Alfredo-Sandoval/rust-radiomics/releases/latest)
-and install it. The file name carries the Python version, such as `cp313` for Python 3.13.
-
-```bash
-python -m pip install rustradiomics-1.1.0-cp313-cp313-macosx_11_0_arm64.whl
+```sh
+pip install rustradiomics
 ```
 
-To build the extension from a checkout of this release, run the following from the
-repository root.
+Needs Python 3.13, 3.14 or 3.15. PyPI has wheels for Apple silicon Macs. On other
+systems pip builds the extension from source, which needs a Rust toolchain.
 
-```bash
-uv venv --python 3.13
-source .venv/bin/activate
-RUSTUP_TOOLCHAIN=1.96.0 uv pip install ./crates/radiomics-py
+To install from a checkout instead, run this at the repository root:
+
+```sh
+python -m pip install ./crates/radiomics-py
 ```
 
-For development, `make env` creates `crates/radiomics-py/.venv` and builds the extension
-into it. After that, `make build` writes an sdist and one wheel for each supported Python
-version to `dist/`, and `uv pip install dist/rustradiomics-*-cp313-*.whl` installs the Python 3.13
-wheel into another environment.
+Check the version and device that Python loaded:
 
-Check the install:
-
-```bash
-python -c "import rustradiomics; print(rustradiomics.__version__, rustradiomics.__device__)"
+```sh
+python -c "import rustradiomics as r; print(r.__version__, r.__device__)"
 ```
 
-The device is always `cpu`.
+The output is `1.1.0 cpu`. For contributor setup and wheel builds, see
+[Development](../development.md).
 
 ## Extract ROI features
 
-`extract_files` reads a NIfTI or NRRD image and an integer label mask and returns one
-value per feature for the selected label:
+From the repository root, run the example below with the included IBSI digital phantom.
+For your own data, replace the two paths with an aligned NIfTI or NRRD image and
+integer label mask. By default, `extract_files` reads the spacing from the image
+and measures the 93 default features over voxels whose mask label is 1.
 
 ```python
-from rustradiomics import Settings, extract_files
+from pathlib import Path
+from rustradiomics import extract_files
 
-settings = Settings(label=1)  # the 93 default PyRadiomics intensity and texture features
-result = extract_files("image.nii.gz", "mask.nii.gz", settings=settings)
+data = Path("crates/radiomics/tests/data/w1/io")
+image_path = data / "ibsi_digital_phantom_image.nii.gz"
+mask_path = data / "ibsi_digital_phantom_mask.nii.gz"
+result = extract_files(image_path, mask_path)
 
-result.features["original_firstorder_Mean"]   # float
-result.metadata["feature_validity"]           # finite / NaN / infinity counts per feature
+print(len(result.features))  # 93
+print(round(result.features["original_firstorder_Mean"], 3))  # 2.149
 ```
 
 Feature keys are `<image>_<family>_<name>`, such as `original_glcm_Contrast` or
@@ -78,13 +67,14 @@ result = extract(image, mask, spacing=(3.0, 1.0, 1.0),
 ## Voxel maps
 
 `mode="voxel"` computes each feature in a neighborhood around every ROI voxel and returns
-one map per feature. `export_files` writes the maps to disk as float32 NIfTI files without
-holding them all in memory:
+one map per feature. `export_files` writes the maps to disk as float32 NIfTI files. To
+export a local mean map for the phantom above, reuse `image_path` and `mask_path` and
+choose an empty output directory.
 
 ```python
 from rustradiomics import Settings, export_files
 
-saved = export_files("image.nii.gz", "mask.nii.gz", "outputs/maps",
+saved = export_files(image_path, mask_path, "outputs/maps",
                      settings=Settings(features=("firstorder_Mean",)))
 saved.maps["original_firstorder_Mean"]  # pathlib.Path to the NIfTI map
 ```
