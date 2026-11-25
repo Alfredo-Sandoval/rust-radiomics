@@ -10,13 +10,12 @@ The package runs on the CPU in float64 and uses all available cores through Rayo
 
 ## Install
 
-The release wheels are for Apple silicon Macs. Download the wheel for your Python version
-from the [release page](https://github.com/Alfredo-Sandoval/rust-radiomics/releases/latest)
-and install it. The file name carries the Python version, such as `cp313` for Python 3.13.
-
 ```bash
-python -m pip install rustradiomics-1.1.0-cp313-cp313-macosx_11_0_arm64.whl
+pip install rustradiomics
 ```
+
+PyPI has wheels for Apple silicon Macs with Python 3.13, 3.14 and 3.15. On other systems
+pip builds the extension from source, which needs a Rust toolchain.
 
 To build the extension from a checkout of this release, run the following from the
 repository root.

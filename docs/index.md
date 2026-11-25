@@ -1,4 +1,4 @@
-# rustradiomics
+# rust radiomics
 
 `rustradiomics` computes 200 radiomics features from images and segmentation masks on the CPU.
 It supports PyRadiomics parameter files and uses IBSI conventions by default.

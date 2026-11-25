@@ -1,6 +1,6 @@
 <div align="center">
 
-# rustradiomics
+# rust radiomics
 
 Radiomics feature extraction in Rust, with a Python API. Computes PyRadiomics and IBSI
 features of a segmented region, or a map of each feature over the image. The standard
@@ -14,8 +14,8 @@ PyRadiomics features run 50 to 140 times faster than in PyRadiomics.
 [Getting started](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/getting-started.md) · [Python API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/python-api.md) · [Rust API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/rust-api.md) · [Feature catalog](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/features.md) · [Parameters](https://github.com/Alfredo-Sandoval/rust-radiomics/blob/main/docs/guide/parameters.md)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/phantom-dark.svg">
-  <img src="docs/assets/phantom-light.svg" alt="The four slices of the IBSI digital phantom drawn as cubes labeled with their intensities, with blue cubes outside the mask, above the GLCM joint entropy map computed from them." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/phantom-dark.svg">
+  <img src="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/phantom-light.svg" alt="The four slices of the IBSI digital phantom drawn as cubes labeled with their intensities, with blue cubes outside the mask, above the GLCM joint entropy map computed from them." width="100%">
 </picture>
 
 <sub>The <a href="https://ibsi.readthedocs.io/en/latest/05_Reference_data_sets.html#digital-phantom">IBSI digital phantom</a> by Alex Zwanenburg (CC BY 4.0) and its GLCM joint entropy map. Each cube is one voxel, and the mask covers the 74 gray voxels.</sub>
@@ -29,21 +29,19 @@ PyRadiomics features run 50 to 140 times faster than in PyRadiomics.
 rustradiomics uses PyRadiomics feature names, reads PyRadiomics parameter files and
 follows IBSI definitions by default. It computes in float64 on the CPU.
 
+> [!NOTE]
+> On an Apple silicon Mac, see also [mlx-radiomics](https://github.com/MedMLX/mlx-radiomics),
+> which computes PyRadiomics and IBSI features on the GPU with MLX. It is listed among the
+> [IBSI implementations](https://theibsi.github.io/implementations).
+
 ## Install
 
 ```bash
-uv venv --python 3.13
-source .venv/bin/activate
-RELEASE=https://github.com/Alfredo-Sandoval/rust-radiomics/releases/download/v1.1.0
-uv pip install "$RELEASE/rustradiomics-1.1.0-cp313-cp313-macosx_11_0_arm64.whl"
+pip install rustradiomics
 ```
 
-The [1.1.0 release](https://github.com/Alfredo-Sandoval/rust-radiomics/releases/tag/v1.1.0)
-has wheels for Apple silicon Macs with Python 3.13, 3.14 and 3.15. For another Python
-version, change `3.13` and both `cp313` tags, such as to `3.14` and `cp314`. To build from
-a checkout with Rust 1.96.0 installed, run
-`RUSTUP_TOOLCHAIN=1.96.0 uv pip install ./crates/radiomics-py` from the repository root.
-Before 1.1.0 the package was named `rustrad`.
+Needs Python 3.13 or later. Wheels cover Apple silicon Macs; elsewhere pip builds from
+source, which needs Rust 1.89 or later. Before 1.1.0 the package was named `rustrad`.
 
 ## Run
 
@@ -213,8 +211,8 @@ disk. See the [Rust API](https://github.com/Alfredo-Sandoval/rust-radiomics/blob
 ## Performance
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/speed-dark.svg">
-  <img src="docs/assets/speed-light.svg" alt="Bar chart of warm call time for 93 PyRadiomics features on the LUNG1-001 lung CT tumor: PyRadiomics 742 ms, rustradiomics 14.5 ms on one CPU thread (51 times faster) and 5.37 ms on 18 CPU threads (138 times faster)." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/speed-dark.svg">
+  <img src="https://raw.githubusercontent.com/Alfredo-Sandoval/rust-radiomics/main/docs/assets/speed-light.svg" alt="Bar chart of warm call time for 93 PyRadiomics features on the LUNG1-001 lung CT tumor: PyRadiomics 742 ms, rustradiomics 14.5 ms on one CPU thread (51 times faster) and 5.37 ms on 18 CPU threads (138 times faster)." width="100%">
 </picture>
 
 rustradiomics and PyRadiomics computed the same 93 intensity and texture features from the
